@@ -1,0 +1,231 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{Bezgin2021}{article}{}
+      \name{author}{2}{}{%
+        {{hash=c64749bc2bced1addfc34f77115a1361}{%
+           family={Bezgin},
+           familyi={B\bibinitperiod},
+           given={Deniz},
+           giveni={D\bibinitperiod}}}%
+        {{hash=55fc22e47666aa79dcc7cf386cb9bcb1}{%
+           family={Adams},
+           familyi={A\bibinitperiod},
+           given={Nikolaus},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{7bb7c8f77d07c14039ecfd7e0e999e4c}
+      \strng{fullhash}{7bb7c8f77d07c14039ecfd7e0e999e4c}
+      \strng{bibnamehash}{7bb7c8f77d07c14039ecfd7e0e999e4c}
+      \strng{authorbibnamehash}{7bb7c8f77d07c14039ecfd7e0e999e4c}
+      \strng{authornamehash}{7bb7c8f77d07c14039ecfd7e0e999e4c}
+      \strng{authorfullhash}{7bb7c8f77d07c14039ecfd7e0e999e4c}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{01}
+      \field{title}{Normalizing Flows as a Novel PDF Turbulence Model}
+      \field{year}{2021}
+      \verb{doi}
+      \verb 10.48550/arXiv.2101.03590
+      \endverb
+    \endentry
+    \entry{Janin2021}{article}{}
+      \name{author}{4}{}{%
+        {{hash=ebfde6db1c28d09c860db99b85bc70cc}{%
+           family={Janin},
+           familyi={J\bibinitperiod},
+           given={Jérémie},
+           giveni={J\bibinitperiod}}}%
+        {{hash=1feadfa54e0a4f952200fe2ddb891413}{%
+           family={Duval},
+           familyi={D\bibinitperiod},
+           given={Fabien},
+           giveni={F\bibinitperiod}}}%
+        {{hash=f326f7fc35772ae775f53cc0aaf3781f}{%
+           family={Friess},
+           familyi={F\bibinitperiod},
+           given={Christophe},
+           giveni={C\bibinitperiod}}}%
+        {{hash=4d8f3cd5017acab6fb62663bf4fa4237}{%
+           family={Sagaut},
+           familyi={S\bibinitperiod},
+           given={Pierre},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{2b923d0ffe429f8cf70c0e1a05d85c1d}
+      \strng{fullhash}{8f6c2f65eda026704c252183be442544}
+      \strng{bibnamehash}{2b923d0ffe429f8cf70c0e1a05d85c1d}
+      \strng{authorbibnamehash}{2b923d0ffe429f8cf70c0e1a05d85c1d}
+      \strng{authornamehash}{2b923d0ffe429f8cf70c0e1a05d85c1d}
+      \strng{authorfullhash}{8f6c2f65eda026704c252183be442544}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physics of Fluids}
+      \field{month}{04}
+      \field{title}{A new linear forcing method for isotropic turbulence with controlled integral length scale}
+      \field{volume}{33}
+      \field{year}{2021}
+      \field{pages}{045127}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1063/5.0045818
+      \endverb
+    \endentry
+    \entry{parikh2025conditionalflowmatchinggenerative}{misc}{}
+      \name{author}{3}{}{%
+        {{hash=956eccbecb7c27c9c47290a51155960f}{%
+           family={Parikh},
+           familyi={P\bibinitperiod},
+           given={Meet\bibnamedelima Hemant},
+           giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=721422781d0d7db0025a149af1497219}{%
+           family={Fan},
+           familyi={F\bibinitperiod},
+           given={Xiantao},
+           giveni={X\bibinitperiod}}}%
+        {{hash=181adb2409340bdc74df7ba3e5809e2f}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Jian-Xun},
+           giveni={J\bibinithyphendelim X\bibinitperiod}}}%
+      }
+      \strng{namehash}{1013d4bfa6bc40e373cda96e080f2f45}
+      \strng{fullhash}{1013d4bfa6bc40e373cda96e080f2f45}
+      \strng{bibnamehash}{1013d4bfa6bc40e373cda96e080f2f45}
+      \strng{authorbibnamehash}{1013d4bfa6bc40e373cda96e080f2f45}
+      \strng{authornamehash}{1013d4bfa6bc40e373cda96e080f2f45}
+      \strng{authorfullhash}{1013d4bfa6bc40e373cda96e080f2f45}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{physics.flu-dyn}
+      \field{eprinttype}{arXiv}
+      \field{title}{Conditional flow matching for generative modeling of near-wall turbulence with quantified uncertainty}
+      \field{year}{2025}
+      \verb{eprint}
+      \verb 2504.14485
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2504.14485
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2504.14485
+      \endverb
+    \endentry
+    \entry{wang2025fourierflowfrequencyawareflowmatching}{misc}{}
+      \name{author}{5}{}{%
+        {{hash=87d9cf6eee024198bbb11715188a1a55}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Haixin},
+           giveni={H\bibinitperiod}}}%
+        {{hash=798b62e58e5dd175137a5faf6c083f80}{%
+           family={Pan},
+           familyi={P\bibinitperiod},
+           given={Jiashu},
+           giveni={J\bibinitperiod}}}%
+        {{hash=d0d5a12b1f5bae45ea7780158b3b35c8}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Hao},
+           giveni={H\bibinitperiod}}}%
+        {{hash=ae021641a8f85fd2607152ab99ed115b}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Fan},
+           giveni={F\bibinitperiod}}}%
+        {{hash=9dd51aeb034259c426fde1ce842caee1}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Tailin},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{ed9eecab0da6e2bd64f930ca44de57cf}
+      \strng{fullhash}{4ed8bf0041da9ba77758494cacf1e0d4}
+      \strng{bibnamehash}{ed9eecab0da6e2bd64f930ca44de57cf}
+      \strng{authorbibnamehash}{ed9eecab0da6e2bd64f930ca44de57cf}
+      \strng{authornamehash}{ed9eecab0da6e2bd64f930ca44de57cf}
+      \strng{authorfullhash}{4ed8bf0041da9ba77758494cacf1e0d4}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{title}{FourierFlow: Frequency-aware Flow Matching for Generative Turbulence Modeling}
+      \field{year}{2025}
+      \verb{eprint}
+      \verb 2506.00862
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2506.00862
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2506.00862
+      \endverb
+    \endentry
+    \entry{Yousif_Yu_Lim_2022}{article}{}
+      \name{author}{3}{}{%
+        {{hash=1eff01d0b478064e7bd65f00e061c826}{%
+           family={Yousif},
+           familyi={Y\bibinitperiod},
+           given={Mustafa\bibnamedelima Z.},
+           giveni={M\bibinitperiod\bibinitdelim Z\bibinitperiod}}}%
+        {{hash=911a1d901396a399717bab61070c297c}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Linqi},
+           giveni={L\bibinitperiod}}}%
+        {{hash=64ece4155b889c15f3eaafe44251f1d9}{%
+           family={Lim},
+           familyi={L\bibinitperiod},
+           given={HeeChang},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{e328630047226b98b27339167ec14cef}
+      \strng{fullhash}{e328630047226b98b27339167ec14cef}
+      \strng{bibnamehash}{e328630047226b98b27339167ec14cef}
+      \strng{authorbibnamehash}{e328630047226b98b27339167ec14cef}
+      \strng{authornamehash}{e328630047226b98b27339167ec14cef}
+      \strng{authorfullhash}{e328630047226b98b27339167ec14cef}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Fluid Mechanics}
+      \field{title}{Physics-guided deep learning for generating turbulent inflow conditions}
+      \field{volume}{936}
+      \field{year}{2022}
+      \field{pages}{A21}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1017/jfm.2022.61
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
