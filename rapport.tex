@@ -89,10 +89,15 @@ Therefore,
     \sigma_2&=\sin(\varphi)\cos(\theta)\cos(\alpha)+\cos(\theta)\sin(\alpha) \\
     \sigma_3&=-\sin(\theta)\cos(\alpha)
 \end{align}
-with $\alpha$ chose according to a uniform distribution on $[0,2\pi]$ i.e. $f_\alpha(x)=\frac{1}{2\pi}\mathbbm{1}_{[0,2\pi]}$.
+with $\alpha$ chose according to a uniform distribution on $[0,2\pi]$ i.e. $f_\alpha(x)=\frac{1}{2\pi}\mathbbm{1}_{[0,2\pi]}$. \\
+The phase coefficient $\psi$ is randomly chosen according to $\mathcal{U}[0,2\pi]$ to ensure spatial homogeneity. \\
+Lastly, the amplitude $\hat{u}_n=\sqrt{E(\kappa_n)\delta \kappa_n}$ where $\delta \kappa_n = \frac{\log(\kappa_N)-\log(\kappa_1)}{N}$ and $\kappa_n=e^{(\log(\kappa_1)+n\delta \kappa_n)}$. \\
+The method to compute the prescribed energy spectrum $E(\kappa_n)$ is described in the next subsection.
 
 \subsection{Energy spectrum}
-In a turbulent setup, an energy cascade is observed where a transfer of energy from large eddies to small scales (or sometimes the opposite). To capture this energy transfer, 
+In a turbulent setup, an energy cascade is observed where a transfer of energy from large eddies to small scales (or sometimes the opposite). 
+
+\\To capture this energy transfer, 
 
 
 \begin{align}
