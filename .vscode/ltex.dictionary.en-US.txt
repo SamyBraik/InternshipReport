@@ -1,1 +1,2 @@
 Kolmogorov
+kurtosis

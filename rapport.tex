@@ -7,11 +7,20 @@
 \usepackage{graphicx}
 \usepackage[hidelinks]{hyperref}
 \usepackage{amsmath}
+\usepackage{amsthm}
 \usepackage{amssymb}
 \usepackage{bbm}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{siunitx}
 
 \usepackage[backend=biber,style=numeric,citestyle=numeric]{biblatex}
 \addbibresource{references.bib}
+
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\newtheorem{remark}{Remark}
 
 % Page setup
 \geometry{margin=1in}
@@ -41,6 +50,12 @@ Turbulence is the term used to describe the unpredictable and complex behavior o
 In this work, we study an ideal type of turbulence flow called Homogeneous and Isotropic Turbulence (HIT). \\
 There are few properties that characterized this type of flow. It is homogeneous which means that the statistical properties (mean, variance, correlation functions) do not depend on position in space, and it is isotropic which means that these statistics are invariant under rotations or reflections of the coordinate.\\
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{illustrations/TurbulenceExample.jpg}
+    \caption{Slice through the field of the scalar dissipation reveals the small-scale structure of turbulence from CNRS UMR 6614 CORIA and JSC}
+\end{figure}
+
 %First, the spatial average should be 0 for each component. Since the flow is isotropic, the turbulence properties should remain invariant to translation or axis rotations.
 
 \bigskip
@@ -49,7 +64,7 @@ When the goal is to use statistical methods to produce turbulent velocity field 
 Here, generative models seem the most suitable. Two major difficulties could be encountered, the huge cost and the poor generalization of the method. Indeed, in order to train such a model, there is a need for highly resolved turbulence usually produced with Direct Numerical Simulation (DNS) which are costly numerical methods. Apart from that, there is the natural cost of the method itself that can't be sidelined. The poor generalization of the method stem from the fact that usually, the models are trained on fields with a specific Reynolds number which leads to poor robustness if the turbulence parameters are changed. \\
 The other path would be to start from an already existent method. For example in the case of Reynolds-averaged Navier–Stokes equations (RANS) technique (see \cite{} for details), we can use statistical methods to learn a closure model, like it is done in \cite{Bezgin2021}. This allows a better theoretical guarantee on the produced and also get rid of the robustness problem from the previous case.  
 
-\newpage
+%\newpage
 
 \section{Model}
 
@@ -62,7 +77,7 @@ This leads to the following expression of the velocity field
 \begin{align}
     u^s(x,t)=\int_{-\infty}^\infty\int_{-\infty}^{\infty}\left[ \hat{u}(\kappa,\omega)e^{l\psi(\kappa,\omega)}\sigma(\kappa,\omega) \right] e^{l(\kappa\cdot x + \omega t)} d\kappa d\omega
 \end{align}
-Discretizing the expression in N random Fourier modes and considering that the field is real it could be written 
+Discretizing the expression in N random Fourier modes and taking into account that the field is real, it could be written 
 \begin{align}
     u^s(x,t)= 2 \sum_{i=1}^N \hat{u}_n \cos(\kappa^n\cdot x + \psi_n + \omega_n t)\sigma^n
 \end{align}
@@ -73,6 +88,20 @@ Furthermore, we place ourselves in the following work in a froze turbulence whic
 For each $n^{th}$ Fourier mode associated with the wave vector $\kappa^n$, $\hat{u}_n$ is the amplitude, $\psi_n$ the phase, $\sigma^n$ the direction and $\omega_n$ the time-frequency. \\
 Like previously mentioned, a good choice of the Fourier coefficient is needed in order to produce a realistic velocity field. \cite{Janin2021} features a discussion on the choice of $\hat{u}, \kappa, \psi_n$ and $\sigma$.
 
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{illustrations/Velocity_Example.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{illustrations/Velocity_Example2.png}
+    \end{minipage}
+    \caption{Synthetic velocity obtain using the Random Fourier model}
+\end{figure}
+
 \subsection{Coefficient choice}
 To ensure the statistical isotropy of the generated field, the wave vector $\kappa$ is chosen randomly on the half-sphere.
 This leads to the following components choices
@@ -82,7 +111,7 @@ This leads to the following components choices
     \kappa_2 & = \cos(\theta)
 \end{align}
 with the angles chosen randomly according to the following probability density functions $f_\theta(x)=\frac{sin(x)}{2}$ and $f_\varphi(x)=\frac{1}{2\pi}\mathbbm{1}_{[0,2\pi]}$. \\
-Regarding the choice of $\sigma$ it is such that the divergence-free condition $\nabla\cdot u^s=0$ which implies that $\kappa\cdot\sigma=0$. \\
+Regarding the choice of $\sigma$, it is such that $\kappa\cdot\sigma=0$ is verified, which is implied by the divergence-free condition $\nabla\cdot u^s=0$. \\
 Therefore, 
 \begin{align}
     \sigma_1&=\cos(\varphi)\cos(\theta)\cos(\alpha)-\sin(\varphi)\sin(\alpha) \\
@@ -95,22 +124,46 @@ Lastly, the amplitude $\hat{u}_n=\sqrt{E(\kappa_n)\delta \kappa_n}$ where $\delt
 The method to compute the prescribed energy spectrum $E(\kappa_n)$ is described in the next subsection.
 
 \subsection{Energy spectrum}
-In a turbulent setup, an energy cascade is observed where a transfer of energy from large eddies to small scales (or sometimes the opposite). 
+%In a turbulent setup, an energy cascade is observed where a transfer of energy from large eddies to small scales (or sometimes the opposite). \\
+Large eddies that carry energy distribute it through the energy cascade to smaller scales until it's dissipated by viscous effect at Kolmogorov scales. 
+This energy transfer across different scales is characterized by the energy spectrum, noted $E(\kappa)$. It describes how much kinetic energy is attached to a give wave number $\kappa$. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{illustrations/energy-spectrum-example.png}
+    \caption{Energy spectrum of a turbulent flow from \cite{phdthesisRies}}
+\end{figure}
 
-\\To capture this energy transfer, 
+In the initial range, this is where the energy is injected into the flow. Could be from an obstacle, a rotating machinery or other phenomenon. The flow is being dominated with big whirlpools. \\
+The inertial range is transferred. The big whirlpools are being broke down into smaller whirlpool and so on.  
 
+\bigskip
+
+In the context of homogeneous isotropic turbulence, Kolmogorov gave the following formula  
 
 \begin{align}
-    E = C_k \kappa^{-5/3}\varepsilon^{2/3}
+    E(\kappa) = C_k \kappa^{-5/3}\varepsilon^{2/3}
 \end{align}
 where $\varepsilon$ is the turbulent dissipation, $\kappa$ the wave number and $C_k$ the Kolmogorov constant.
 
+Although, this formula captures the behavior in the inertial range and introduces this famous $-\frac{5}{3}$ decreases, it fails at reconstructing the spectrum in the initial and dissipative range i.e. at low and high wave numbers. To obtain a more complete recovery of the energy spectrum, \cite{Janin2021} uses, among others, the von-Kármán Pao (VKP) energy spectrum.
 \bigskip
-We use the von-Kármán Pao (VKP) energy spectrum to try to reconstruct the theoretical energy spectrum. \\
+
 It is defined by 
 
 \begin{align}
     E_{\text{VKP}}(\kappa)=\frac{2}{3}\alpha_e k L_e \frac{(kL_e)^4}{[(kL_e)^2+1]^{17/6}}\exp(-2(\kappa L_\eta)^2)
+\end{align}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{illustrations/Energy_Spectrum_VKP.png}
+    \caption{VKP energy spectrum vs theoretical spectrum}
+\end{figure}
+
+The real energy can be then computed 
+
+\begin{align}
+    E = \int_{0}^{\infty}E_{\text{VKP}}(\kappa) d\kappa
 \end{align}
 
 \subsection{Limitations and goals}
@@ -124,7 +177,31 @@ With the random Fourier model in mind, the goal is to identify which coefficient
 
 
 \section{Method}
-To tackle the problem, no obvious path stood out. The work was highly exploratory and featured trials and errors along the way.
+To tackle the problem, no obvious path stood out. 
+The one chosen is simply to define a model and a loss and optimize the model's parameters. \\
+Since the goal was to retrieve heavy-tailed velocity increments, the logical criteria to look out was the kurtosis of those increments. 
+
+[Mieux décrire le model (nn.Parameter)]
+
+\begin{definition}[Kurtosis]
+    Let $X$ be a real random variable, $\mu$ its mean and $\sigma$ its standard deviation. Its kurtosis is defined by 
+    \begin{align}
+    \beta_2=\mathbb{E}\left((\frac{X-\mu}{\sigma}) \right)^2    
+    \end{align}
+     
+\end{definition}
+
+\begin{remark}
+    For a Gaussian distribution, which is the distribution of the velocity increments in the first place, the kurtosis is equal to 3.
+\end{remark}
+
+\begin{remark}
+    In practice, we look at the flatness which is simply the $\beta_2-3$.
+\end{remark}
+
+\subsection{Preliminary work}
+In order to check the robustness of the model in the first place, we conducted a simple experiment. We set the target flatness as 3, meaning we look for Gaussian velocity increments. Starting from Gaussian velocity increments and heavy-tailed velocity increments, the goal is to see if we can retrieve (or in the first place keep) Gaussian velocity increments.  
+
 
 \subsection{Phase coefficient}
 The first idea was to work on the phase parameter $\psi$. 
@@ -136,11 +213,37 @@ The first idea was to work on the phase parameter $\psi$.
 
 
 \section{Results and Discussion}
-% Results and analysis.
+The work was highly exploratory and featured trials and errors along the way.
 
 \section{Conclusion}
 % Conclusion and future work.
 
+\appendix
+
+\section{Turbulence parameters}
+To generate the turbulence few physical and spectral parameters have to be given as input for the model. Throughout the report the parameters that have been used are listed in the following table. 
+
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+\textbf{Parameter} & \textbf{Value} & \textbf{Unit}\\
+\midrule
+Length of the periodic box   & $\tfrac{\pi}{6}$ & \si{\meter}\\
+Number of modes              & 250 or 500 & --\\
+RMS speed                    & 0.222 & \si{\meter\per\second}\\
+Integral length scale        & 0.024 & \si{\meter} \\
+Kinetic energy               & $1.5 \times (0.222 \times 2)$ & \si{\meter\squared\per\second\squared} \\
+Viscosity                    & $1.8 \times 10^{-5}$ & \si{\meter\squared\per\second} \\
+Minimum wave number          & $\tfrac{2\pi}{1.0}$ & \si{\per\meter}\\
+Maximum wave number          & $\tfrac{2\pi}{0.01}$ & \si{\per\meter}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Coefficient marginal distributions}
+
+
+\newpage
 \printbibliography
 
 \end{document}
