@@ -1,15 +1,15 @@
 \contentsline {section}{\numberline {1}Introduction}{3}{section.1}%
 \contentsline {section}{\numberline {2}Model}{4}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Random Fourier}{4}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Coefficient choice}{5}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Energy spectrum}{5}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Limitations and goals}{7}{subsection.2.4}%
-\contentsline {section}{\numberline {3}Method}{7}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Preliminary work}{8}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Phase coefficient}{8}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Phase, wave vector and direction}{8}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Angles}{8}{subsection.3.4}%
-\contentsline {section}{\numberline {4}Results and Discussion}{8}{section.4}%
-\contentsline {section}{\numberline {5}Conclusion}{8}{section.5}%
-\contentsline {section}{\numberline {A}Turbulence parameters}{8}{appendix.A}%
-\contentsline {section}{\numberline {B}Coefficient marginal distributions}{9}{appendix.B}%
+\contentsline {subsection}{\numberline {2.2}Coefficient choice}{6}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Energy spectrum}{6}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Limitations and goals}{8}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Method}{9}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Preliminary work}{10}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Phase coefficient}{11}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Phase, wave vector and direction}{11}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Angles}{11}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Results and Discussion}{11}{section.4}%
+\contentsline {section}{\numberline {5}Conclusion}{11}{section.5}%
+\contentsline {section}{\numberline {A}Turbulence parameters}{11}{appendix.A}%
+\contentsline {section}{\numberline {B}Coefficient marginal distributions}{11}{appendix.B}%

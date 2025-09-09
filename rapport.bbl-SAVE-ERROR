@@ -49,57 +49,6 @@
       \verb 10.48550/arXiv.2101.03590
       \endverb
     \endentry
-    \entry{GotohVelIncr}{article}{}
-      \name{author}{3}{}{%
-        {{hash=021f9810b7839118808dabf8ae431a5e}{%
-           family={Gotoh},
-           familyi={G\bibinitperiod},
-           given={Toshiyuki},
-           giveni={T\bibinitperiod}}}%
-        {{hash=d432cf972c7e4b4ff400eb04b5633f82}{%
-           family={Fukayama},
-           familyi={F\bibinitperiod},
-           given={Daigen},
-           giveni={D\bibinitperiod}}}%
-        {{hash=a6e081692c915e41e61d08ec178cdc4b}{%
-           family={Nakano},
-           familyi={N\bibinitperiod},
-           given={Tohru},
-           giveni={T\bibinitperiod}}}%
-      }
-      \strng{namehash}{69c12062621b17e9ac28bf21508b790c}
-      \strng{fullhash}{69c12062621b17e9ac28bf21508b790c}
-      \strng{bibnamehash}{69c12062621b17e9ac28bf21508b790c}
-      \strng{authorbibnamehash}{69c12062621b17e9ac28bf21508b790c}
-      \strng{authornamehash}{69c12062621b17e9ac28bf21508b790c}
-      \strng{authorfullhash}{69c12062621b17e9ac28bf21508b790c}
-      \field{sortinit}{G}
-      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Velocity field statistics in the inertial to dissipation range of three-dimensional homogeneous steady turbulent flow are studied using a high-resolution DNS with up to N=10243 grid points. The range of the Taylor microscale Reynolds number is between 38 and 460. Isotropy at the small scales of motion is well satisfied from half the integral scale (L) down to the Kolmogorov scale (η). The Kolmogorov constant is 1.64±0.04, which is close to experimentally determined values. The third order moment of the longitudinal velocity difference scales as the separation distance r, and its coefficient is close to 4/5. A clear inertial range is observed for moments of the velocity difference up to the tenth order, between 2λ≈100η and L/2≈300η, where λ is the Taylor microscale. The scaling exponents are measured directly from the structure functions; the transverse scaling exponents are smaller than the longitudinal exponents when the order is greater than four. The crossover length of the longitudinal velocity structure function increases with the order and approaches 2λ, while that of the transverse function remains approximately constant at λ. The crossover length and importance of the Taylor microscale are discussed.}
-      \field{issn}{1070-6631}
-      \field{journaltitle}{Physics of Fluids}
-      \field{month}{03}
-      \field{number}{3}
-      \field{title}{Velocity field statistics in homogeneous steady turbulence obtained using a high-resolution direct numerical simulation}
-      \field{volume}{14}
-      \field{year}{2002}
-      \field{pages}{1065\bibrangedash 1081}
-      \range{pages}{17}
-      \verb{doi}
-      \verb 10.1063/1.1448296
-      \endverb
-      \verb{eprint}
-      \verb https://pubs.aip.org/aip/pof/article-pdf/14/3/1065/19111368/1065_1_online.pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1063/1.1448296
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1063/1.1448296
-      \endverb
-    \endentry
     \entry{Janin2021}{article}{}
       \name{author}{4}{}{%
         {{hash=ebfde6db1c28d09c860db99b85bc70cc}{%

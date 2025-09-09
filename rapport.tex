@@ -84,6 +84,7 @@ Discretizing the expression in N random Fourier modes and taking into account th
 Furthermore, we place ourselves in the following work in a froze turbulence which means that we ignore the effect of time. Therefore, the expression if simplified and we have
 \begin{align}
     u^s(x,t)= 2 \sum_{n=1}^N \hat{u}_n \cos(\kappa^n\cdot x + \psi_n)\sigma^n
+    \label{RandomFourierModel}
 \end{align}
 For each $n^{th}$ Fourier mode associated with the wave vector $\kappa^n$, $\hat{u}_n$ is the amplitude, $\psi_n$ the phase, $\sigma^n$ the direction and $\omega_n$ the time-frequency. \\
 Like previously mentioned, a good choice of the Fourier coefficient is needed in order to produce a realistic velocity field. \cite{Janin2021} features a discussion on the choice of $\hat{u}, \kappa, \psi_n$ and $\sigma$.
@@ -100,6 +101,12 @@ Like previously mentioned, a good choice of the Fourier coefficient is needed in
         \includegraphics[width=\linewidth]{illustrations/Velocity_Example2.png}
     \end{minipage}
     \caption{Synthetic velocity obtain using the Random Fourier model}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{illustrations/VelocityFieldVTU.png}
+    \caption{Synthetic velocity obtain using the Random Fourier model represented by arrows}
 \end{figure}
 
 \subsection{Coefficient choice}
@@ -134,7 +141,7 @@ This energy transfer across different scales is characterized by the energy spec
 \end{figure}
 
 In the initial range, this is where the energy is injected into the flow. Could be from an obstacle, a rotating machinery or other phenomenon. The flow is being dominated with big whirlpools. \\
-The inertial range is transferred. The big whirlpools are being broke down into smaller whirlpool and so on.  
+The inertial range is where the energy is transferred. The big whirlpools are being broke down into smaller whirlpool and so on.  Finally, in the dissipative range, the viscous effect dominate and break down the turbulence.
 
 \bigskip
 
@@ -158,6 +165,7 @@ It is defined by
     \centering
     \includegraphics[width=0.7\textwidth]{illustrations/Energy_Spectrum_VKP.png}
     \caption{VKP energy spectrum vs theoretical spectrum}
+    \label{VKPspectrum}
 \end{figure}
 
 The real energy can be then computed 
@@ -167,10 +175,92 @@ The real energy can be then computed
 \end{align}
 
 \subsection{Limitations and goals}
-The assessment of the synthetic velocity field's quality could be done by looking at few metrics. First, the reconstructed energy spectrum should match as close as possible the theoretical spectrum. Then, for each component, the average should be 0 and the Root Mean Square (RMS) values should match the one used to build the turbulence in the first place. Lastly, we look at the shape of the velocity increments.   
+The assessment of the synthetic velocity field's quality could be done by looking at few metrics. First, the reconstructed energy spectrum should match as close as possible the theoretical spectrum. Then, for each component, the average should be 0 and the Root Mean Square (RMS) values should match the one used to build the turbulence in the first place. Lastly, we look at the shape of the velocity increments. \\
+
+\begin{definition}{RMS}
+    Let $x=(x_1,\ldots x_n)$ a real vector. The RMS is defined by 
+    \begin{align}
+        x_\text{RMS} = \sqrt{\frac{1}{n}\sum_{i=1}^{n}x_i^2}
+    \end{align}
+\end{definition}
+
+\begin{definition}{Velocity increments}
+    Let $u$ be a velocity field. For $r>0$ and a point $x$, the velocity increments are defined by 
+    \begin{align}
+        \delta_r u = u(x+r)-u(x) 
+        \label{DefVelIncr}
+    \end{align}
+\end{definition}
+
+The model gives us the following results for each metric 
+
+\begin{table}[h]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tabular}{ll}
+\toprule
+\textbf{Direction} & \textbf{Value} \\
+\midrule
+x & -0.0026918877847492695 \\
+y & -0.0001003775978460908 \\
+z & -0.0012576839653775096 \\
+\bottomrule
+\end{tabular}
+\caption{Velocity mean}
+\label{BaseMean}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\begin{tabular}{ll}
+\toprule
+\textbf{Direction} & \textbf{Value (expected : 0.222)} \\
+\midrule
+x & 0.19583044946193695 \\
+y & 0.17598901689052582 \\
+z & 0.19306901097297668 \\
+\bottomrule
+\end{tabular}
+\caption{RMS speed}
+\label{BaseRMSspeed}
+\end{minipage}
+\end{table}
+
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{illustrations/TransVelIncrExample.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{illustrations/LongVelIncrExample.png}
+    \end{minipage}
+    \caption{Velocity increments in blue with standard Gaussian in red dots}
+\end{figure}
+
 
 \bigskip
-Although, the model retrieve the correct energy spectrum and limited anisotropy, the velocity increments obtained are Gaussian. It is known that velocity increments appear to be non-Gaussian and more particularly heavy-tailed distribution. For instance \cite{} [Trouver un papier qui montre que pour un certain niveau de turbulence (Reynolds disons), regarder un r particulier et montre un beau plot].
+Although, the model retrieve a correct energy spectrum (Figure \ref{VKPspectrum}) and limited anisotropy, the velocity increments obtained are Gaussian. It is known that velocity increments appear to be non-Gaussian and more particularly heavy-tailed distribution. For instance \cite{} shows that velocity increments display heavy taildness when $r$ is small in \ref{DefVelIncr}. It is due ...
+
+Furthermore, the following figures show that the more turbulent a flow is, the heavier the tails of its velocity increments are.
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{illustrations/TransVelIncrRe.png}
+        \caption{Variation of the transverse velocity derivative PDF with the Reynolds number from \cite{GotohVelIncr}}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{illustrations/LongVelIncrRe.png}
+        \caption{Variation of the longitudinal velocity derivative PDF with the Reynolds number from \cite{GotohVelIncr}}
+    \end{minipage}
+\end{figure}
 
 \bigskip
 With the random Fourier model in mind, the goal is to identify which coefficient could lead to more realistic velocity increments without disrupting the other good properties that are already satisfied. 
@@ -179,9 +269,8 @@ With the random Fourier model in mind, the goal is to identify which coefficient
 \section{Method}
 To tackle the problem, no obvious path stood out. 
 The one chosen is simply to define a model and a loss and optimize the model's parameters. \\
-Since the goal was to retrieve heavy-tailed velocity increments, the logical criteria to look out was the kurtosis of those increments. 
+Since the goal is to retrieve heavy-tailed velocity increments, the logical criteria to look out is the kurtosis of those increments. 
 
-[Mieux décrire le model (nn.Parameter)]
 
 \begin{definition}[Kurtosis]
     Let $X$ be a real random variable, $\mu$ its mean and $\sigma$ its standard deviation. Its kurtosis is defined by 
@@ -198,13 +287,52 @@ Since the goal was to retrieve heavy-tailed velocity increments, the logical cri
 \begin{remark}
     In practice, we look at the flatness which is simply the $\beta_2-3$.
 \end{remark}
+Therefore, we came up with a simple loss 
+
+\begin{definition}{Flatness loss}
+    \begin{align}
+        \mathcal{L}_F = 
+    \end{align}
+\end{definition}
+
+To compute the energy spectrum as close as the theoritical spectrum, we simply look at the MSE with an added smoothness term. This gave us the following loss
+
+\begin{definition} Energy spectrum loss
+    Let $\alpha>0$. 
+    \begin{align}
+        \mathcal{L}_{ES} = 
+    \end{align} 
+\end{definition}
+
+\bigskip
+Most of the learning and training has been done simply on the parameter by defining them as torch Parameter. 
+
+[Mieux décrire le model (nn.Parameter)]
 
 \subsection{Preliminary work}
-In order to check the robustness of the model in the first place, we conducted a simple experiment. We set the target flatness as 3, meaning we look for Gaussian velocity increments. Starting from Gaussian velocity increments and heavy-tailed velocity increments, the goal is to see if we can retrieve (or in the first place keep) Gaussian velocity increments.  
+In order to check the robustness of the random Fourier model in the first place, we conducted a simple experiment. We set the target flatness as 3, meaning we look for Gaussian velocity increments. Since it is the base model velocity increments, we want to know if we will retrieve the parameterization introduce in \cite{Janin2021} or will it move away. We look up two situations : starting from Gaussian velocity increments and heavy-tailed velocity increments.
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\linewidth]{illustrations/StartGaussian.png}
+    \caption{Angles distributions starting from Gaussian velocity increments}
+\end{figure}
+
+Here, the angles distributions stay sensibly the same, with a slight change in $\alpha$. This is expected since we already satisfy the target flatness.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\linewidth]{illustrations/StartHeavyTail.png}
+    \caption{Angles distributions starting from heavy-tailed velocity increments}
+\end{figure}
+
+In this case, $\varphi$ and $\alpha$ stay relatively stable but $\theta$ is drawn to a more spread distribution. 
+
+\bigskip
+In both cases Gaussian velocity increments are indeed recovered, the RMS speed are in the same range as in \ref{BaseRMSspeed} and the generated velocity field does average to 0.
 
 \subsection{Phase coefficient}
-The first idea was to work on the phase parameter $\psi$. 
+To improve the situation, our first idea was to work on the phase parameter $\psi$ in \ref{RandomFourierModel}. 
 
 
 \subsection{Phase, wave vector and direction}
