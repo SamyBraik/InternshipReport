@@ -1,0 +1,9 @@
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@sectionintoc {2}{Model}{4}{0}{2}
+\beamer@subsectionintoc {2}{1}{Random Fourier model}{4}{0}{2}
+\beamer@subsectionintoc {2}{2}{Energy spectrum}{6}{0}{2}
+\beamer@sectionintoc {3}{Quality metrics \& Limitations}{7}{0}{3}
+\beamer@sectionintoc {4}{Method}{11}{0}{4}
+\beamer@subsectionintoc {4}{1}{Preliminary experiments}{13}{0}{4}
+\beamer@sectionintoc {5}{Results \& Discussion}{15}{0}{5}
+\beamer@sectionintoc {6}{Appendix: Turbulence parameters}{18}{1}{6}

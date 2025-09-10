@@ -13,6 +13,7 @@
 \usepackage{float}
 \usepackage{booktabs}
 \usepackage{siunitx}
+\usepackage{comment}
 
 \usepackage[backend=biber,style=numeric,citestyle=numeric]{biblatex}
 \addbibresource{references.bib}
@@ -46,7 +47,6 @@
 Turbulence is the term used to describe the unpredictable and complex behavior of a fluid's motion. It is characterized by vortex. It is opposed to a laminar flow, where the particles' movement is pre. Formally, the behavior of a fluid is quantified by the Reynolds number (Re), the higher this number is the more turbulence the fluid is. 
 
 \bigskip
-
 In this work, we study an ideal type of turbulence flow called Homogeneous and Isotropic Turbulence (HIT). \\
 There are few properties that characterized this type of flow. It is homogeneous which means that the statistical properties (mean, variance, correlation functions) do not depend on position in space, and it is isotropic which means that these statistics are invariant under rotations or reflections of the coordinate.\\
 
@@ -168,11 +168,22 @@ It is defined by
     \label{VKPspectrum}
 \end{figure}
 
+In order to reconstruct the theoretical, computational ... is needed. The number of modes\dots
+ 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{illustrations/EnergySpectrumTrained.png}
+    \caption{VKP energy spectrum vs theoretical spectrum with}
+\end{figure}
+
+\begin{comment}
 The real energy can be then computed 
 
 \begin{align}
     E = \int_{0}^{\infty}E_{\text{VKP}}(\kappa) d\kappa
 \end{align}
+\end{comment}
 
 \subsection{Limitations and goals}
 The assessment of the synthetic velocity field's quality could be done by looking at few metrics. First, the reconstructed energy spectrum should match as close as possible the theoretical spectrum. Then, for each component, the average should be 0 and the Root Mean Square (RMS) values should match the one used to build the turbulence in the first place. Lastly, we look at the shape of the velocity increments. \\
@@ -295,7 +306,7 @@ Therefore, we came up with a simple loss
     \end{align}
 \end{definition}
 
-To compute the energy spectrum as close as the theoritical spectrum, we simply look at the MSE with an added smoothness term. This gave us the following loss
+To compute the energy spectrum as close as the theoretical spectrum, we simply look at the MSE with an added smoothness term. This gave us the following loss
 
 \begin{definition} Energy spectrum loss
     Let $\alpha>0$. 

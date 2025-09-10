@@ -120,6 +120,8 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/translations/translations.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/translations/translations.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/comment/comment.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/comment/comment.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
@@ -282,6 +284,11 @@ INPUT ./illustrations/Energy_Spectrum_VKP.png
 INPUT ./illustrations/Energy_Spectrum_VKP.png
 INPUT ./illustrations/Energy_Spectrum_VKP.png
 INPUT ./illustrations/Energy_Spectrum_VKP.png
+INPUT ./illustrations/EnergySpectrumTrained.png
+INPUT ./illustrations/EnergySpectrumTrained.png
+INPUT ./illustrations/EnergySpectrumTrained.png
+INPUT ./illustrations/EnergySpectrumTrained.png
+INPUT ./illustrations/EnergySpectrumTrained.png
 INPUT ./illustrations/TransVelIncrExample.png
 INPUT ./illustrations/TransVelIncrExample.png
 INPUT ./illustrations/TransVelIncrExample.png
