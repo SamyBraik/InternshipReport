@@ -14,6 +14,8 @@
 \usepackage{booktabs}
 \usepackage{siunitx}
 \usepackage{comment}
+\usepackage{subcaption}
+
 
 \usepackage[backend=biber,style=numeric,citestyle=numeric]{biblatex}
 \addbibresource{references.bib}
@@ -169,7 +171,7 @@ It is defined by
 \end{figure}
 
 In order to reconstruct the theoretical, computational ... is needed. The number of modes\dots
- 
+
 
 \begin{figure}[H]
     \centering
@@ -188,14 +190,14 @@ The real energy can be then computed
 \subsection{Limitations and goals}
 The assessment of the synthetic velocity field's quality could be done by looking at few metrics. First, the reconstructed energy spectrum should match as close as possible the theoretical spectrum. Then, for each component, the average should be 0 and the Root Mean Square (RMS) values should match the one used to build the turbulence in the first place. Lastly, we look at the shape of the velocity increments. \\
 
-\begin{definition}{RMS}
+\begin{definition}[RMS]
     Let $x=(x_1,\ldots x_n)$ a real vector. The RMS is defined by 
     \begin{align}
         x_\text{RMS} = \sqrt{\frac{1}{n}\sum_{i=1}^{n}x_i^2}
     \end{align}
 \end{definition}
 
-\begin{definition}{Velocity increments}
+\begin{definition}[Velocity increments]
     Let $u$ be a velocity field. For $r>0$ and a point $x$, the velocity increments are defined by 
     \begin{align}
         \delta_r u = u(x+r)-u(x) 
@@ -286,9 +288,8 @@ Since the goal is to retrieve heavy-tailed velocity increments, the logical crit
 \begin{definition}[Kurtosis]
     Let $X$ be a real random variable, $\mu$ its mean and $\sigma$ its standard deviation. Its kurtosis is defined by 
     \begin{align}
-    \beta_2=\mathbb{E}\left((\frac{X-\mu}{\sigma}) \right)^2    
+    \text{kurt}(X)=\mathbb{E}\left[\left(\frac{X-\mu}{\sigma}\right) \right]^2    
     \end{align}
-     
 \end{definition}
 
 \begin{remark}
@@ -296,24 +297,32 @@ Since the goal is to retrieve heavy-tailed velocity increments, the logical crit
 \end{remark}
 
 \begin{remark}
-    In practice, we look at the flatness which is simply the $\beta_2-3$.
+    In practice, we look at the flatness which is simply the $\text{kurt}-3$.
 \end{remark}
-Therefore, we came up with a simple loss 
+Therefore, in order to push for heavy tailed velocity increments, we came up with a straight forward flatness loss. 
 
-\begin{definition}{Flatness loss}
+\begin{definition}[Flatness loss]
+    Let $F_\text{target}$ be the target flatness, $x=(x_1,\ldots,x_n)$ be the input vector.
     \begin{align}
-        \mathcal{L}_F = 
+        \mathcal{L}_F (x) = \frac{1}{N}\sum_{i=1}^{N}\left( \text{kurt}-3 - F_\text{target}  \right) ^2 
     \end{align}
 \end{definition}
 
 To compute the energy spectrum as close as the theoretical spectrum, we simply look at the MSE with an added smoothness term. This gave us the following loss
 
-\begin{definition} Energy spectrum loss
-    Let $\alpha>0$. 
+\begin{definition}[Energy spectrum loss]
+    Let $\alpha>0$, $E_\text{rec}$ the reconstructed spectrum and $E\text{theory}$ the theoretical spectrum.
+    We define a smoothness term by 
     \begin{align}
-        \mathcal{L}_{ES} = 
+        S(E_\text{rec}) = \frac{1}{N-2}\sum_{i=2}^{N-1}\left(E_{\text{rec},i-1} -2E_{\text{rec},i} + E_{\text{rec},i+1}   \right)
+    \end{align}
+    The loss is then defined by 
+    \begin{align}
+        \mathcal{L}_{ES} = \frac{1}{N} \sum_{i=1}^{N} (E_{\text{rec},i}-E_{\text{theory},i})^2 + \alpha S(E_\text{rec}) 
     \end{align} 
 \end{definition}
+
+
 
 \bigskip
 Most of the learning and training has been done simply on the parameter by defining them as torch Parameter. 
@@ -357,6 +366,7 @@ The work was highly exploratory and featured trials and errors along the way.
 \section{Conclusion}
 % Conclusion and future work.
 
+\newpage
 \appendix
 
 \section{Turbulence parameters}
@@ -379,9 +389,247 @@ Maximum wave number          & $\tfrac{2\pi}{0.01}$ & \si{\per\meter}\\
 \end{tabular}
 \end{center}
 
-\section{Coefficient marginal distributions}
+\section{Variable selection}
+\section{Variable selection}
+To address the question of which angles are the most influential and which one could be negligible, we simply perform a case analysis. In the same training context, we varied individual angles while keeping others froze and untrained. It gave us the following results.
+Losses obtain for different parameter combination
+
+\begin{table}[!htb]
+    \caption{Losses obtain for different parameter combination}
+    \begin{subtable}{.5\linewidth}
+      \centering
+        \caption{250 modes}
+        \begin{tabular}{ c | c | c }
+        Parameters & Loss & RMS (x, y, z)\\
+        \hline
+        $(0,0,\alpha)$ & 123.24456 & (0.24 , 0.08 , 0.12)\\
+        $(0, \theta, 0)$ & 1.50244 & (0.22 , 0.11 , 0.08)\\
+        $(0, \theta,\alpha)$ & 65.67394 & (0.11 , 0.22 , 0.09)\\
+        $(\varphi, 0, 0)$ & 0.75362 & (0.09 , 0.24 , 0.06)\\
+        $(\varphi, 0, \alpha)$ & 0.74764 & (0.20 , 0.10 , 0.09)\\
+        $(\varphi,\theta, 0)$ & 0.75258 & (0.12 , 0.22 , 0.04)\\
+        $(\varphi,\theta,\alpha)$ & 2.15906 & (0.22 , 0.11 , 0.09)\\
+    \end{tabular}
+    \end{subtable}%
+    \begin{subtable}{.5\linewidth}
+      \centering
+        \caption{500 modes}
+        \begin{tabular}{ c | c | c }
+        Parameters & Loss & RMS (x, y, z)\\
+        \hline
+        $(0,0,\alpha)$ & 0.73864 & (0.14 , 0.20 , 0.06)\\
+        $(0, \theta, 0)$ & 0.74741 & (0.20 , 0.11 , 0.10)\\
+        $(0, \theta,\alpha)$ & 0.79737 & (0.14 , 0.21 , 0.09)\\
+        $(\varphi, 0, 0)$ & 0.75514 & (0.10 , 0.22 , 0.08)\\
+        $(\varphi, 0, \alpha)$ & 0.74716 & (0.21 , 0.11 , 0.09)\\
+        $(\varphi,\theta, 0)$ & 0.74118 & (0.22 , 0.09 , 0.11)\\
+        $(\varphi,\theta,\alpha)$ & 0.75355 & (0.20 , 0.13 , 0.09)\\
+        \end{tabular}
+    \end{subtable} 
+\end{table}
 
 
+Overall, the more modes the better it is. A lot of the cases are pretty close together and lead to sensibly the same losses and in practice the desired flatness and a good recovery of the energy spectrum. \\
+RMS values are affected after the learning step, depending on which angles are considered. For the moment, adding a loss on those RMS values tend to lead to less flat tails on the output velocities increments. A trade-off between RMS and flat tails seems to arise. For instance, in the case where all the parameters are learned, like in the previous section, the RMS for the z direction is off (0.09 with an expected value of 0.222).
+
+%It appears that considering all three parameters gives the best result, which makes sense since it allow more degrees of freedom. It also highlight the importance of \(\alpha\). If we constaint the model to two parameters (or even one), including alpha consistently leads to better results. Moreover, \(\theta\) is second on the list. Constraining the number of parameters to two, the case \((\theta,\alpha)\) is preferred to the case \((\varphi,\alpha)\).
+
+\subsection{Marginal distributions}
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=0.35\textwidth]{VariableSelection/alpha.png}
+    \label{fig:Distributions4.1}
+    \caption{Marginal density of the learned parameters \((\alpha)\)}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=0.35\textwidth]{VariableSelection/theta.png}
+    \label{fig:Distributions4.2}
+    \caption{Marginal density of the learned parameters \((\theta)\)}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=0.35\textwidth]{VariableSelection/theta_alpha.png}
+    \label{fig:Distributions4.3}
+    \caption{Marginal density of the learned parameters \((\theta,\alpha)\)}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=0.35\textwidth]{VariableSelection/phi.png}
+    \label{fig:Distributions4.4}
+    \caption{Marginal density of the learned parameters \((\varphi)\)}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=0.35\textwidth]{VariableSelection/phi_alpha.png}
+    \label{fig:Distributions4.5}
+    \caption{Marginal density of the learned parameters \((\varphi,\alpha)\)}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=0.35\textwidth]{VariableSelection/phi_theta.png}
+    \label{fig:Distributions4.6}
+    \caption{Marginal density of the learned parameters \((\varphi,\theta)\)}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=0.35\textwidth]{VariableSelection/phi_theta_alpha.png}
+    \label{fig:Distributions4.7}
+    \caption{Marginal density of the learned parameters \((\varphi,\theta,\alpha)\)}
+\end{figure}
+
+We can see that among all the cases, the final marginal distributions seem pretty consistent throughout.
+
+\section{Variable selection with \(\psi\)}
+We repeat the previous experiment considering also the phase coefficient \(\psi\). 
+
+\bigskip
+%When introducing \(\psi\), the earlier conclusion that \(\alpha\) is the most important coefficient appear to no longer hold. The three cases with the lowest loss are, in fact, those where \(\alpha\) is excluded. 
+
+%Same observation as before could be made, the greater the loss with 250 modes, the smaller it is with 500 modes.
+
+
+\begin{table}[!htb]
+    \caption{Losses obtain for different parameter combination}
+    \begin{subtable}{.5\linewidth}
+      \centering
+        \caption{250 modes}
+        \begin{tabular}{ c | c | c}
+        Parameters & Loss & RMS (x, y, z)\\
+        \hline
+        $(0,0,\alpha,\psi)$ & 0.75522 & (0.20 , 0.11 , 0.10)\\
+        $(\varphi,0, \alpha,\psi)$ & 0.74388 & (0.09 , 0.22 , 0.04)\\
+        $(\varphi, 0,0,\psi)$ & 0.73930 & (0.11 , 0.22 , 0.08)\\
+        $(0, \theta, 0,\psi)$ & 24.56362 & (0.12 , 0.22 , 0.06)\\
+        $(0, 0, 0,\psi)$ & 0.74839 & (0.09 , 0.24 , 0.04)\\
+        $(0,\theta, \alpha,\psi)$ & 0.75160 & (0.21 , 0.12 , 0.10)\\
+        $(\varphi,\theta,0,\psi)$ & 0.81957 & (0.09 , 0.21 , 0.08)\\
+        $(\varphi,\theta,\alpha,\psi)$ & 183.87051 & (0.11 , 0.27 , 0.05)\\
+        \end{tabular}
+    \end{subtable}%
+    \begin{subtable}{.5\linewidth}
+      \centering
+        \caption{500 modes}
+        \begin{tabular}{ c | c | c}
+        Parameters & Loss & RMS (x, y, z)\\
+        \hline
+        $(0,0,\alpha,\psi)$ & 0.74805 & (0.11 , 0.25 , 0.07)\\
+        $(\varphi,0, \alpha,\psi)$ & 0.74443 & (0.21 , 0.17 , 0.06)\\
+        $(\varphi, 0,0,\psi)$ & 0.74356 & (0.09 , 0.27 , 0.06)\\
+        $(0, \theta, 0,\psi)$ & 0.74534 & (0.20 , 0.11 , 0.10)\\
+        $(0, 0, 0,\psi)$ & 0.75040 & (0.08 , 0.27 , 0.06)\\
+        $(0,\theta, \alpha,\psi)$ & 0.74584 & (0.20 , 0.14 , 0.10)\\
+        $(\varphi,\theta,0,\psi)$ & 0.73757 & (0.20 , 0.12 , 0.11)\\
+        $(\varphi,\theta,\alpha,\psi)$ &  3.38473  & (0.23 , 0.11 , 0.09)\\
+        \end{tabular}
+    \end{subtable} 
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=0.35\textwidth]{VariableSelectionPsi/alpha_psi.png}
+    \caption{Marginal density of the learned parameters \((\alpha,\psi)\)}
+    \label{fig:Distributions5.1}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=0.35\textwidth]{VariableSelectionPsi/phi_alpha_psi.png}
+    \caption{Marginal density of the learned parameters \((\varphi,\alpha,\psi)\)}
+    \label{fig:Distributions5.2}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=0.35\textwidth]{VariableSelectionPsi/phi_psi.png}
+    \caption{Marginal density of the learned parameters \((\varphi,\psi)\)}
+    \label{fig:Distributions5.3}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=0.35\textwidth]{VariableSelectionPsi/theta_psi.png}
+    \caption{Marginal density of the learned parameters \((\theta,\psi)\)}
+    \label{fig:Distributions5.4}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=0.35\textwidth]{VariableSelectionPsi/psi.png}
+    \caption{Marginal density of the learned parameters \((\psi)\)}
+    \label{fig:Distributions5.5}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=0.35\textwidth]{VariableSelectionPsi/theta_alpha_psi.png}
+    \caption{Marginal density of the learned parameters \((\theta,\alpha,\psi)\)}
+    \label{fig:Distributions5.6}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=0.35\textwidth]{VariableSelectionPsi/phi_theta_psi.png}
+    \caption{Marginal density of the learned parameters \((\varphi,\theta,\psi)\)}
+    \label{fig:Distributions5.7}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{VariableSelectionPsi/phi_theta_alpha_psi.png}
+    \caption{Marginal density of the learned parameters \((\varphi,\theta,\alpha,\psi)\)}
+    \label{fig:Distributions5.8}
+\end{figure}
+Overall, the distribution of the angles appears consistent with the previous case where \(\psi\) was not considered. The distribution of \(\psi\) itself remains pretty consistent across all cases.\\
+The distribution of $\alpha$ is the most similar to the base distribution $\mathcal{U}([0,2\pi])$.\\
+However, these figures represent only the marginal densities and do not capture the dependencies between parameters, which could explain the observation made from \ref{Table2}.
+
+\subsection{Joint distributions}
+
+\begin{figure}[htbp]
+    \centering
+
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{VariableSelectionPsi/joint_alpha_psi.png}
+        \caption{Learned parameters \((\alpha, \psi)\)}
+        \label{fig:joint_alpha_psi}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{VariableSelectionPsi/joint_phi_psi.png}
+        \caption{Joint distribution of \((\varphi, \psi)\)}
+        \label{fig:joint_phi_psi}
+    \end{subfigure}
+
+    \vspace{0.5em}
+
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{VariableSelectionPsi/joint_theta_psi.png}
+        \caption{Joint distribution of \((\theta, \psi)\)}
+        \label{fig:joint_theta_psi}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{VariableSelectionPsi/joint3d_phi_alpha_psi.png}
+        \caption{Joint distribution of \((\varphi, \theta, \alpha)\)}
+        \label{fig:joint3D_phi_alpha_psi}
+    \end{subfigure}
+
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{VariableSelectionPsi/joint3d_phi_theta_psi.png}
+        \caption{Joint distribution of \((\theta, \psi)\)}
+        \label{fig:joint3D_phi_theta_psi}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{VariableSelectionPsi/joint3d_theta_alpha_psi.png}
+        \caption{Joint distribution of \((\varphi, \theta, \alpha)\)}
+        \label{fig:joint3D_theta_alpha_psi}
+    \end{subfigure}
+
+    \caption{Joint distributions of parameter combination}
+    \label{fig:joint_distributions_psi}
+
+\end{figure}
 \newpage
 \printbibliography
 

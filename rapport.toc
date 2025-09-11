@@ -11,5 +11,9 @@
 \contentsline {subsection}{\numberline {3.4}Angles}{11}{subsection.3.4}%
 \contentsline {section}{\numberline {4}Results and Discussion}{11}{section.4}%
 \contentsline {section}{\numberline {5}Conclusion}{11}{section.5}%
-\contentsline {section}{\numberline {A}Turbulence parameters}{11}{appendix.A}%
-\contentsline {section}{\numberline {B}Coefficient marginal distributions}{12}{appendix.B}%
+\contentsline {section}{\numberline {A}Turbulence parameters}{12}{appendix.A}%
+\contentsline {section}{\numberline {B}Variable selection}{12}{appendix.B}%
+\contentsline {section}{\numberline {C}Variable selection}{12}{appendix.C}%
+\contentsline {subsection}{\numberline {C.1}Marginal distributions}{13}{subsection.C.1}%
+\contentsline {section}{\numberline {D}Variable selection with \(\psi \)}{15}{appendix.D}%
+\contentsline {subsection}{\numberline {D.1}Joint distributions}{18}{subsection.D.1}%
