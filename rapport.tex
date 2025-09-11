@@ -64,7 +64,7 @@ There are few properties that characterized this type of flow. It is homogeneous
 
 When the goal is to use statistical methods to produce turbulent velocity field two paths are worth considering. The first one is to simply use a statistical method that generate the velocity field directly. This is done in \cite{Yousif_Yu_Lim_2022},\cite{wang2025fourierflowfrequencyawareflowmatching} or \cite{parikh2025conditionalflowmatchinggenerative}. \\
 Here, generative models seem the most suitable. Two major difficulties could be encountered, the huge cost and the poor generalization of the method. Indeed, in order to train such a model, there is a need for highly resolved turbulence usually produced with Direct Numerical Simulation (DNS) which are costly numerical methods. Apart from that, there is the natural cost of the method itself that can't be sidelined. The poor generalization of the method stem from the fact that usually, the models are trained on fields with a specific Reynolds number which leads to poor robustness if the turbulence parameters are changed. \\
-The other path would be to start from an already existent method. For example in the case of Reynolds-averaged Navier–Stokes equations (RANS) technique (see \cite{} for details), we can use statistical methods to learn a closure model, like it is done in \cite{Bezgin2021}. This allows a better theoretical guarantee on the produced and also get rid of the robustness problem from the previous case.  
+The other path would be to start from an already existent method. For example in the case of Reynolds-averaged Navier–Stokes equations (RANS) technique (see \cite{} for details), we can use statistical methods to learn a closure model, like it is done in \cite{Bezgin2021}. This allows a better theoretical guarantee on the produced field and also get rid of the robustness problem from the previous case.  
 
 %\newpage
 
@@ -111,22 +111,31 @@ Like previously mentioned, a good choice of the Fourier coefficient is needed in
     \caption{Synthetic velocity obtain using the Random Fourier model represented by arrows}
 \end{figure}
 
-\subsection{Coefficient choice}
+\subsection{Coefficient choice} \label{Coefficient choice}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{illustrations/WaveVectorGeometry.png}
+    \caption{Wave vector geometry of the $n^\text{th}$ Fourier mode from \cite{Janin2021}}
+    \label{WaveVectorGeometry}
+\end{figure}
 To ensure the statistical isotropy of the generated field, the wave vector $\kappa$ is chosen randomly on the half-sphere.
 This leads to the following components choices
 \begin{align}
-    \kappa_1 &= \sin(\theta)\cos(\varphi) \\
-    \kappa_2 &= \sin(\theta)\sin(\varphi) \\
-    \kappa_2 & = \cos(\theta)
+    \kappa_1 &= \sin(\theta)\cos(\varphi) \label{kappa1}\\ 
+    \kappa_2 &= \sin(\theta)\sin(\varphi) \label{kappa2}\\
+    \kappa_2 & = \cos(\theta) \label{kappa3}
 \end{align}
 with the angles chosen randomly according to the following probability density functions $f_\theta(x)=\frac{sin(x)}{2}$ and $f_\varphi(x)=\frac{1}{2\pi}\mathbbm{1}_{[0,2\pi]}$. \\
 Regarding the choice of $\sigma$, it is such that $\kappa\cdot\sigma=0$ is verified, which is implied by the divergence-free condition $\nabla\cdot u^s=0$. \\
 Therefore, 
+
 \begin{align}
-    \sigma_1&=\cos(\varphi)\cos(\theta)\cos(\alpha)-\sin(\varphi)\sin(\alpha) \\
-    \sigma_2&=\sin(\varphi)\cos(\theta)\cos(\alpha)+\cos(\theta)\sin(\alpha) \\
-    \sigma_3&=-\sin(\theta)\cos(\alpha)
+    \sigma_1&=\cos(\varphi)\cos(\theta)\cos(\alpha)-\sin(\varphi)\sin(\alpha) \label{sigma1}\\
+    \sigma_2&=\sin(\varphi)\cos(\theta)\cos(\alpha)+\cos(\theta)\sin(\alpha) \label{sigma2}\\
+    \sigma_3&=-\sin(\theta)\cos(\alpha) \label{sigma3}
 \end{align}
+
 with $\alpha$ chose according to a uniform distribution on $[0,2\pi]$ i.e. $f_\alpha(x)=\frac{1}{2\pi}\mathbbm{1}_{[0,2\pi]}$. \\
 The phase coefficient $\psi$ is randomly chosen according to $\mathcal{U}[0,2\pi]$ to ensure spatial homogeneity. \\
 Lastly, the amplitude $\hat{u}_n=\sqrt{E(\kappa_n)\delta \kappa_n}$ where $\delta \kappa_n = \frac{\log(\kappa_N)-\log(\kappa_1)}{N}$ and $\kappa_n=e^{(\log(\kappa_1)+n\delta \kappa_n)}$. \\
@@ -135,15 +144,15 @@ The method to compute the prescribed energy spectrum $E(\kappa_n)$ is described 
 \subsection{Energy spectrum}
 %In a turbulent setup, an energy cascade is observed where a transfer of energy from large eddies to small scales (or sometimes the opposite). \\
 Large eddies that carry energy distribute it through the energy cascade to smaller scales until it's dissipated by viscous effect at Kolmogorov scales. 
-This energy transfer across different scales is characterized by the energy spectrum, noted $E(\kappa)$. It describes how much kinetic energy is attached to a give wave number $\kappa$. 
+This energy transfer across different scales is characterized by the energy spectrum, noted $E(\kappa)$. It describes how much kinetic energy is attached to a given wave number $\kappa$. 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{illustrations/energy-spectrum-example.png}
     \caption{Energy spectrum of a turbulent flow from \cite{phdthesisRies}}
 \end{figure}
 
-In the initial range, this is where the energy is injected into the flow. Could be from an obstacle, a rotating machinery or other phenomenon. The flow is being dominated with big whirlpools. \\
-The inertial range is where the energy is transferred. The big whirlpools are being broke down into smaller whirlpool and so on.  Finally, in the dissipative range, the viscous effect dominate and break down the turbulence.
+In the initial range, energy is injected into the flow, for instance, by an obstacle, rotating machinery, or another mechanism. The flow is being dominated with big whirlpools. \\
+The inertial range is where the energy is transferred. The large eddies are broken down into smaller eddies and so on.  Finally, in the dissipative range, the viscous effects dominate and break down the turbulence.
 
 \bigskip
 
@@ -154,7 +163,7 @@ In the context of homogeneous isotropic turbulence, Kolmogorov gave the followin
 \end{align}
 where $\varepsilon$ is the turbulent dissipation, $\kappa$ the wave number and $C_k$ the Kolmogorov constant.
 
-Although, this formula captures the behavior in the inertial range and introduces this famous $-\frac{5}{3}$ decreases, it fails at reconstructing the spectrum in the initial and dissipative range i.e. at low and high wave numbers. To obtain a more complete recovery of the energy spectrum, \cite{Janin2021} uses, among others, the von-Kármán Pao (VKP) energy spectrum.
+Although this formula captures the behavior in the inertial range and introduces this famous $-\frac{5}{3}$ slop, it fails at reconstructing the spectrum in the initial and dissipative range i.e. at low and high wave numbers. To obtain a more complete recovery of the energy spectrum, \cite{Janin2021} uses, among others, the von-Kármán Pao (VKP) energy spectrum.
 \bigskip
 
 It is defined by 
@@ -170,7 +179,7 @@ It is defined by
     \label{VKPspectrum}
 \end{figure}
 
-In order to reconstruct the theoretical, computational ... is needed. The number of modes\dots
+In order to accurately reconstruct the theoretical spectrum, a sufficient number of computational Fourier modes is required.
 
 
 \begin{figure}[H]
@@ -325,7 +334,7 @@ To compute the energy spectrum as close as the theoretical spectrum, we simply l
 
 
 \bigskip
-Most of the learning and training has been done simply on the parameter by defining them as torch Parameter. 
+Most of the learning and training has been done simply on the parameter by defining them as torch Parameter. It is fairly simple model (probably the simplest) but led some great results. 
 
 [Mieux décrire le model (nn.Parameter)]
 
@@ -352,19 +361,96 @@ In this case, $\varphi$ and $\alpha$ stay relatively stable but $\theta$ is draw
 In both cases Gaussian velocity increments are indeed recovered, the RMS speed are in the same range as in \ref{BaseRMSspeed} and the generated velocity field does average to 0.
 
 \subsection{Phase coefficient}
-To improve the situation, our first idea was to work on the phase parameter $\psi$ in \ref{RandomFourierModel}. 
+To improve the situation, our first idea was to work on the phase parameter $\psi$ in \ref{RandomFourierModel}, with the idea of finding a better distribution than $\mathcal{U}([0,2\pi])$. A simple experiment consisting of changing $\mathcal{U}[0,2\pi]$ to arbitrary distribution like $\mathcal{N}(-10,130), \mathcal{E}(1)$ or $\mathcal{\ldots}$ showed that it has no effect on the shape of the velocity increments distribution. Indeed, the reason is pretty straight forward : the Central Limit Theorem (CLT). \\
+Sampling I.I.D. values of $\psi$ according to any of these distributions and plugging it in $\ref{RandomFourierModel}$ with $N$ big enough (which is expected in our situation) lead directly to an application of the CLT. 
+
+\bigskip
 
 
 \subsection{Phase, wave vector and direction}
+The natural follow-up was to look at all the coefficient at the same time, without changing the objectives nor the method. It led to heavy tailed velocity increments indeed as shown in figure \ref{}
+
+This approach led to promising results as the volicity increments obtained displayed heavy tailed.
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{VelIncrPSIKAPPASIGMA/VelIncrLong.png}
+        \label{fig:VelIncrLong3}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{VelIncrPSIKAPPASIGMA/VelIncrTrans.png}
+        \label{fig:VelIncrTrans3}
+    \end{minipage}
+    \caption{Velocity increments with learned coefficient \((\psi,\kappa,\sigma)\)}
+\end{figure}
+
+The reconstructed spectrum \ldots
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\linewidth]{VelIncrPSIKAPPASIGMA/EnergySpectrum.png}
+    \label{fig:EnergySpectrum3}
+    \caption{Marginal density of the learned parameters $(\psi,\kappa,\sigma)$}
+\end{figure}
+
+On the learned parameters, we fit a Gaussian kernel density estimator and obtain the marginal distribution
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{VelIncrPSIKAPPASIGMA/Distributions.png}
+    \label{fig:Distributions3}
+    \caption{Marginal density of the learned parameters $(\psi,\kappa,\sigma)$}
+    \label{MarginalsPsiKappaSigma}
+\end{figure}
+
+What we found is to generate new triplet $(\psi,\kappa,\sigma)$ sampling directly according to the marginal distributions from \ref{MarginalsPsiKappaSigma} doesn't work but sampling according to the obtained joint distribution led to some flatness of the velocity increments.
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{VelIncrPSIKAPPASIGMA/GenIncrLong.png}
+        \label{fig:GenIncrLong3}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{VelIncrPSIKAPPASIGMA/GenIncrTrans.png}
+        \label{fig:GenIncrTrans3}
+    \end{minipage}
+    \caption{Velocity increments with sampled coefficient \((\psi,\kappa,\sigma)\)}
+\end{figure}
+
+Although, this approach works as it produces heavy tailed velocity increments, there is no guarantee that the obtained $\kappa$ and $\sigma$ are orthogonal to each other as stated in \ref{Coefficient choice}. \\
+Therefore, we shift our focus on the angles $(\varphi,\theta,\alpha)$ composing the $\kappa$ and $\sigma$ component. We aim at learning the three angles while using \ref{kappa1}, \ref{kappa2},\ref{kappa3} and \ref{sigma1},\ref{sigma2},\ref{sigma3} to preserve the identity $\kappa\cdot\sigma=0$.
+
 
 \subsection{Angles}
+Since we want to work on the angles, we need to make sure the angles are always coherent with the geometry (see \ref{WaveVectorGeometry}). Therefore, to make sure that $\varphi, \theta$ and $\alpha$ lives in their respective domain $[0,\pi], [0,\pi]$ and $[0,2\pi]$.
 
+We train the model on 500 modes with $100^3$ points, with the turbulence parameter of \ref{TurbulenceParameters}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{illustrations/EnergySpectrumTrained.png}
+    \caption{Energy spectrum reconstructed after training}
+\end{figure}
+
+and we obtain the following marginal distribution.
+\begin{figure}[H]
+    \centering 
+    \includegraphics[width=1.0\linewidth]{illustrations/AnglesDistributionLearned.png}
+    \caption{Marginal distribution of the learned angles}
+\end{figure}
 
 \section{Results and Discussion}
 The work was highly exploratory and featured trials and errors along the way.
 
 \section{Conclusion}
 % Conclusion and future work.
+
+
 
 \newpage
 \appendix
@@ -387,6 +473,7 @@ Minimum wave number          & $\tfrac{2\pi}{1.0}$ & \si{\per\meter}\\
 Maximum wave number          & $\tfrac{2\pi}{0.01}$ & \si{\per\meter}\\
 \bottomrule
 \end{tabular}
+\label{TurbulenceParameters}
 \end{center}
 
 \section{Variable selection}
@@ -402,13 +489,13 @@ Losses obtain for different parameter combination
         \begin{tabular}{ c | c | c }
         Parameters & Loss & RMS (x, y, z)\\
         \hline
-        $(0,0,\alpha)$ & 123.24456 & (0.24 , 0.08 , 0.12)\\
-        $(0, \theta, 0)$ & 1.50244 & (0.22 , 0.11 , 0.08)\\
-        $(0, \theta,\alpha)$ & 65.67394 & (0.11 , 0.22 , 0.09)\\
-        $(\varphi, 0, 0)$ & 0.75362 & (0.09 , 0.24 , 0.06)\\
-        $(\varphi, 0, \alpha)$ & 0.74764 & (0.20 , 0.10 , 0.09)\\
-        $(\varphi,\theta, 0)$ & 0.75258 & (0.12 , 0.22 , 0.04)\\
-        $(\varphi,\theta,\alpha)$ & 2.15906 & (0.22 , 0.11 , 0.09)\\
+        $(0,0,\alpha)$ & 123.24456 & (0.24, 0.08, 0.12)\\
+        $(0, \theta, 0)$ & 1.50244 & (0.22, 0.11, 0.08)\\
+        $(0, \theta,\alpha)$ & 65.67394 & (0.11, 0.22, 0.09)\\
+        $(\varphi, 0, 0)$ & 0.75362 & (0.09, 0.24, 0.06)\\
+        $(\varphi, 0, \alpha)$ & 0.74764 & (0.20, 0.10, 0.09)\\
+        $(\varphi,\theta, 0)$ & 0.75258 & (0.12, 0.22, 0.04)\\
+        $(\varphi,\theta,\alpha)$ & 2.15906 & (0.22, 0.11, 0.09)\\
     \end{tabular}
     \end{subtable}%
     \begin{subtable}{.5\linewidth}
@@ -417,13 +504,13 @@ Losses obtain for different parameter combination
         \begin{tabular}{ c | c | c }
         Parameters & Loss & RMS (x, y, z)\\
         \hline
-        $(0,0,\alpha)$ & 0.73864 & (0.14 , 0.20 , 0.06)\\
-        $(0, \theta, 0)$ & 0.74741 & (0.20 , 0.11 , 0.10)\\
-        $(0, \theta,\alpha)$ & 0.79737 & (0.14 , 0.21 , 0.09)\\
-        $(\varphi, 0, 0)$ & 0.75514 & (0.10 , 0.22 , 0.08)\\
-        $(\varphi, 0, \alpha)$ & 0.74716 & (0.21 , 0.11 , 0.09)\\
-        $(\varphi,\theta, 0)$ & 0.74118 & (0.22 , 0.09 , 0.11)\\
-        $(\varphi,\theta,\alpha)$ & 0.75355 & (0.20 , 0.13 , 0.09)\\
+        $(0,0,\alpha)$ & 0.73864 & (0.14, 0.20, 0.06)\\
+        $(0, \theta, 0)$ & 0.74741 & (0.20, 0.11, 0.10)\\
+        $(0, \theta,\alpha)$ & 0.79737 & (0.14, 0.21, 0.09)\\
+        $(\varphi, 0, 0)$ & 0.75514 & (0.10, 0.22, 0.08)\\
+        $(\varphi, 0, \alpha)$ & 0.74716 & (0.21, 0.11, 0.09)\\
+        $(\varphi,\theta, 0)$ & 0.74118 & (0.22, 0.09, 0.11)\\
+        $(\varphi,\theta,\alpha)$ & 0.75355 & (0.20, 0.13, 0.09)\\
         \end{tabular}
     \end{subtable} 
 \end{table}
@@ -497,14 +584,14 @@ We repeat the previous experiment considering also the phase coefficient \(\psi\
         \begin{tabular}{ c | c | c}
         Parameters & Loss & RMS (x, y, z)\\
         \hline
-        $(0,0,\alpha,\psi)$ & 0.75522 & (0.20 , 0.11 , 0.10)\\
-        $(\varphi,0, \alpha,\psi)$ & 0.74388 & (0.09 , 0.22 , 0.04)\\
-        $(\varphi, 0,0,\psi)$ & 0.73930 & (0.11 , 0.22 , 0.08)\\
-        $(0, \theta, 0,\psi)$ & 24.56362 & (0.12 , 0.22 , 0.06)\\
-        $(0, 0, 0,\psi)$ & 0.74839 & (0.09 , 0.24 , 0.04)\\
-        $(0,\theta, \alpha,\psi)$ & 0.75160 & (0.21 , 0.12 , 0.10)\\
-        $(\varphi,\theta,0,\psi)$ & 0.81957 & (0.09 , 0.21 , 0.08)\\
-        $(\varphi,\theta,\alpha,\psi)$ & 183.87051 & (0.11 , 0.27 , 0.05)\\
+        $(0,0,\alpha,\psi)$ & 0.75522 & (0.20, 0.11, 0.10)\\
+        $(\varphi,0, \alpha,\psi)$ & 0.74388 & (0.09, 0.22, 0.04)\\
+        $(\varphi, 0,0,\psi)$ & 0.73930 & (0.11, 0.22, 0.08)\\
+        $(0, \theta, 0,\psi)$ & 24.56362 & (0.12, 0.22, 0.06)\\
+        $(0, 0, 0,\psi)$ & 0.74839 & (0.09, 0.24, 0.04)\\
+        $(0,\theta, \alpha,\psi)$ & 0.75160 & (0.21, 0.12, 0.10)\\
+        $(\varphi,\theta,0,\psi)$ & 0.81957 & (0.09, 0.21, 0.08)\\
+        $(\varphi,\theta,\alpha,\psi)$ & 183.87051 & (0.11, 0.27, 0.05)\\
         \end{tabular}
     \end{subtable}%
     \begin{subtable}{.5\linewidth}
@@ -513,16 +600,16 @@ We repeat the previous experiment considering also the phase coefficient \(\psi\
         \begin{tabular}{ c | c | c}
         Parameters & Loss & RMS (x, y, z)\\
         \hline
-        $(0,0,\alpha,\psi)$ & 0.74805 & (0.11 , 0.25 , 0.07)\\
-        $(\varphi,0, \alpha,\psi)$ & 0.74443 & (0.21 , 0.17 , 0.06)\\
-        $(\varphi, 0,0,\psi)$ & 0.74356 & (0.09 , 0.27 , 0.06)\\
-        $(0, \theta, 0,\psi)$ & 0.74534 & (0.20 , 0.11 , 0.10)\\
-        $(0, 0, 0,\psi)$ & 0.75040 & (0.08 , 0.27 , 0.06)\\
-        $(0,\theta, \alpha,\psi)$ & 0.74584 & (0.20 , 0.14 , 0.10)\\
-        $(\varphi,\theta,0,\psi)$ & 0.73757 & (0.20 , 0.12 , 0.11)\\
-        $(\varphi,\theta,\alpha,\psi)$ &  3.38473  & (0.23 , 0.11 , 0.09)\\
+        $(0,0,\alpha,\psi)$ & 0.74805 & (0.11, 0.25, 0.07)\\
+        $(\varphi,0, \alpha,\psi)$ & 0.74443 & (0.21, 0.17, 0.06)\\
+        $(\varphi, 0,0,\psi)$ & 0.74356 & (0.09, 0.27, 0.06)\\
+        $(0, \theta, 0,\psi)$ & 0.74534 & (0.20, 0.11, 0.10)\\
+        $(0, 0, 0,\psi)$ & 0.75040 & (0.08, 0.27, 0.06)\\
+        $(0,\theta, \alpha,\psi)$ & 0.74584 & (0.20, 0.14, 0.10)\\
+        $(\varphi,\theta,0,\psi)$ & 0.73757 & (0.20, 0.12, 0.11)\\
+        $(\varphi,\theta,\alpha,\psi)$ &  3.38473  & (0.23, 0.11, 0.09)\\
         \end{tabular}
-    \end{subtable} 
+    \end{subtable}
 \end{table}
 
 \begin{figure}[H]
