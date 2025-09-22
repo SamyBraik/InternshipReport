@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.11)  22 SEP 2025 16:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.11)  22 SEP 2025 17:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1204,12 +1204,12 @@ Overfull \hbox (26.13426pt too wide) in paragraph at lines 189--189
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
-<illustrations/TransVelIncrExample.png, id=404, 445.665pt x 327.47343pt>
+<illustrations/TransVelIncrExample.png, id=403, 445.665pt x 327.47343pt>
 File: illustrations/TransVelIncrExample.png Graphic file (type png)
 <use illustrations/TransVelIncrExample.png>
 Package pdftex.def Info: illustrations/TransVelIncrExample.png  used on input line 189.
 (pdftex.def)             Requested size: 154.03183pt x 113.18332pt.
-<illustrations/LongVelIncrExample.png, id=405, 450.18187pt x 327.47343pt>
+<illustrations/LongVelIncrExample.png, id=404, 450.18187pt x 327.47343pt>
 File: illustrations/LongVelIncrExample.png Graphic file (type png)
 <use illustrations/LongVelIncrExample.png>
 Package pdftex.def Info: illustrations/LongVelIncrExample.png  used on input line 189.
@@ -1221,29 +1221,12 @@ Overfull \hbox (26.13426pt too wide) has occurred while \output is active
 
 [12
 
- <./illustrations/TransVelIncrExample.png> <./illustrations/LongVelIncrExample.png>]
-Overfull \hbox (26.13426pt too wide) in paragraph at lines 197--197
+ <./illustrations/TransVelIncrExample.png> <./illustrations/LongVelIncrExample.png>] Excluding 'comment' comment.
+Overfull \hbox (26.13426pt too wide) in paragraph at lines 208--208
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
-<illustrations/Velocity_Example.png, id=432, 406.8801pt x 328.8285pt>
-File: illustrations/Velocity_Example.png Graphic file (type png)
-<use illustrations/Velocity_Example.png>
-Package pdftex.def Info: illustrations/Velocity_Example.png  used on input line 197.
-(pdftex.def)             Requested size: 205.37926pt x 165.97931pt.
-
-Overfull \hbox (26.13426pt too wide) has occurred while \output is active
- [][]  \T1/cmss/m/n/6 ([])  
- []
-
-[13
-
- <./illustrations/Velocity_Example.png>]
-Overfull \hbox (26.13426pt too wide) in paragraph at lines 206--206
- [][]  \T1/cmss/m/n/6 ([])  
- []
-
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 206.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 208.
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
@@ -1251,13 +1234,30 @@ Overfull \hbox (26.13426pt too wide) has occurred while \output is active
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
-[14
+[13
 
 ]
-Overfull \hbox (26.13426pt too wide) in paragraph at lines 227--227
+Overfull \hbox (26.13426pt too wide) in paragraph at lines 229--229
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
+
+Overfull \hbox (26.13426pt too wide) has occurred while \output is active
+ [][]  \T1/cmss/m/n/6 ([])  
+ []
+
+[14
+
+]
+Overfull \hbox (26.13426pt too wide) in paragraph at lines 243--243
+ [][]  \T1/cmss/m/n/6 ([])  
+ []
+
+<illustrations/StartGaussian.png, id=517, 895.09406pt x 293.59688pt>
+File: illustrations/StartGaussian.png Graphic file (type png)
+<use illustrations/StartGaussian.png>
+Package pdftex.def Info: illustrations/StartGaussian.png  used on input line 243.
+(pdftex.def)             Requested size: 308.06367pt x 101.0491pt.
 
 Overfull \hbox (26.13426pt too wide) has occurred while \output is active
  [][]  \T1/cmss/m/n/6 ([])  
@@ -1265,16 +1265,21 @@ Overfull \hbox (26.13426pt too wide) has occurred while \output is active
 
 [15
 
-]
-Overfull \hbox (26.13426pt too wide) in paragraph at lines 241--241
+ <./illustrations/StartGaussian.png>] Excluding 'comment' comment.
+Overfull \hbox (26.13426pt too wide) in paragraph at lines 268--268
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
-<illustrations/StartGaussian.png, id=546, 895.09406pt x 293.59688pt>
-File: illustrations/StartGaussian.png Graphic file (type png)
-<use illustrations/StartGaussian.png>
-Package pdftex.def Info: illustrations/StartGaussian.png  used on input line 241.
-(pdftex.def)             Requested size: 308.06367pt x 101.0491pt.
+<VelIncrPSIKAPPASIGMA/VelIncrLong.png, id=544, 432.1746pt x 314.3745pt>
+File: VelIncrPSIKAPPASIGMA/VelIncrLong.png Graphic file (type png)
+<use VelIncrPSIKAPPASIGMA/VelIncrLong.png>
+Package pdftex.def Info: VelIncrPSIKAPPASIGMA/VelIncrLong.png  used on input line 268.
+(pdftex.def)             Requested size: 154.03183pt x 112.04263pt.
+<VelIncrPSIKAPPASIGMA/VelIncrTrans.png, id=545, 427.8384pt x 314.3745pt>
+File: VelIncrPSIKAPPASIGMA/VelIncrTrans.png Graphic file (type png)
+<use VelIncrPSIKAPPASIGMA/VelIncrTrans.png>
+Package pdftex.def Info: VelIncrPSIKAPPASIGMA/VelIncrTrans.png  used on input line 268.
+(pdftex.def)             Requested size: 154.03183pt x 113.18431pt.
 
 Overfull \hbox (26.13426pt too wide) has occurred while \output is active
  [][]  \T1/cmss/m/n/6 ([])  
@@ -1282,21 +1287,20 @@ Overfull \hbox (26.13426pt too wide) has occurred while \output is active
 
 [16
 
- <./illustrations/StartGaussian.png>] Excluding 'comment' comment.
-Overfull \hbox (26.13426pt too wide) in paragraph at lines 266--266
+ <./VelIncrPSIKAPPASIGMA/VelIncrLong.png> <./VelIncrPSIKAPPASIGMA/VelIncrTrans.png>]
+Overfull \hbox (26.13426pt too wide) in paragraph at lines 300--300
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
-<VelIncrPSIKAPPASIGMA/VelIncrLong.png, id=573, 432.1746pt x 314.3745pt>
-File: VelIncrPSIKAPPASIGMA/VelIncrLong.png Graphic file (type png)
-<use VelIncrPSIKAPPASIGMA/VelIncrLong.png>
-Package pdftex.def Info: VelIncrPSIKAPPASIGMA/VelIncrLong.png  used on input line 266.
-(pdftex.def)             Requested size: 154.03183pt x 112.04263pt.
-<VelIncrPSIKAPPASIGMA/VelIncrTrans.png, id=574, 427.8384pt x 314.3745pt>
-File: VelIncrPSIKAPPASIGMA/VelIncrTrans.png Graphic file (type png)
-<use VelIncrPSIKAPPASIGMA/VelIncrTrans.png>
-Package pdftex.def Info: VelIncrPSIKAPPASIGMA/VelIncrTrans.png  used on input line 266.
-(pdftex.def)             Requested size: 154.03183pt x 113.18431pt.
+<VelIncrPSIKAPPASIGMA/EnergySpectrum.png, id=575, 433.62pt x 342.5297pt>
+File: VelIncrPSIKAPPASIGMA/EnergySpectrum.png Graphic file (type png)
+<use VelIncrPSIKAPPASIGMA/EnergySpectrum.png>
+Package pdftex.def Info: VelIncrPSIKAPPASIGMA/EnergySpectrum.png  used on input line 300.
+(pdftex.def)             Requested size: 188.26346pt x 148.71698pt.
+
+Overfull \vbox (27.41153pt too high) detected at line 300
+ []
+
 
 Overfull \hbox (26.13426pt too wide) has occurred while \output is active
  [][]  \T1/cmss/m/n/6 ([])  
@@ -1304,20 +1308,42 @@ Overfull \hbox (26.13426pt too wide) has occurred while \output is active
 
 [17
 
- <./VelIncrPSIKAPPASIGMA/VelIncrLong.png> <./VelIncrPSIKAPPASIGMA/VelIncrTrans.png>]
-Overfull \hbox (26.13426pt too wide) in paragraph at lines 298--298
+ <./VelIncrPSIKAPPASIGMA/EnergySpectrum.png>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 302.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\varphi' on input line 302.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\theta' on input line 302.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\alpha' on input line 302.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 302.
+
+
+Overfull \hbox (26.13426pt too wide) in paragraph at lines 314--314
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
-<VelIncrPSIKAPPASIGMA/EnergySpectrum.png, id=604, 433.62pt x 342.5297pt>
-File: VelIncrPSIKAPPASIGMA/EnergySpectrum.png Graphic file (type png)
-<use VelIncrPSIKAPPASIGMA/EnergySpectrum.png>
-Package pdftex.def Info: VelIncrPSIKAPPASIGMA/EnergySpectrum.png  used on input line 298.
-(pdftex.def)             Requested size: 188.26346pt x 148.71698pt.
-
-Overfull \vbox (27.41153pt too high) detected at line 298
- []
-
+<illustrations/TransVelIncrAngles.png, id=602, 424.9476pt x 312.9291pt>
+File: illustrations/TransVelIncrAngles.png Graphic file (type png)
+<use illustrations/TransVelIncrAngles.png>
+Package pdftex.def Info: illustrations/TransVelIncrAngles.png  used on input line 314.
+(pdftex.def)             Requested size: 167.72658pt x 123.51251pt.
+<illustrations/LongVelIncrAngles.png, id=603, 462.528pt x 346.896pt>
+File: illustrations/LongVelIncrAngles.png Graphic file (type png)
+<use illustrations/LongVelIncrAngles.png>
+Package pdftex.def Info: illustrations/LongVelIncrAngles.png  used on input line 314.
+(pdftex.def)             Requested size: 167.72658pt x 125.7929pt.
 
 Overfull \hbox (26.13426pt too wide) has occurred while \output is active
  [][]  \T1/cmss/m/n/6 ([])  
@@ -1325,42 +1351,24 @@ Overfull \hbox (26.13426pt too wide) has occurred while \output is active
 
 [18
 
- <./VelIncrPSIKAPPASIGMA/EnergySpectrum.png>]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 300.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\varphi' on input line 300.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\theta' on input line 300.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\alpha' on input line 300.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 300.
-
-
-Overfull \hbox (26.13426pt too wide) in paragraph at lines 312--312
+ <./illustrations/TransVelIncrAngles.png> <./illustrations/LongVelIncrAngles.png>]
+Overfull \hbox (26.13426pt too wide) in paragraph at lines 347--347
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
-<illustrations/TransVelIncrAngles.png, id=632, 424.9476pt x 312.9291pt>
-File: illustrations/TransVelIncrAngles.png Graphic file (type png)
-<use illustrations/TransVelIncrAngles.png>
-Package pdftex.def Info: illustrations/TransVelIncrAngles.png  used on input line 312.
-(pdftex.def)             Requested size: 167.72658pt x 123.51251pt.
-<illustrations/LongVelIncrAngles.png, id=633, 462.528pt x 346.896pt>
-File: illustrations/LongVelIncrAngles.png Graphic file (type png)
-<use illustrations/LongVelIncrAngles.png>
-Package pdftex.def Info: illustrations/LongVelIncrAngles.png  used on input line 312.
+File: illustrations/Energy_Spectrum_VKP.png Graphic file (type png)
+<use illustrations/Energy_Spectrum_VKP.png>
+Package pdftex.def Info: illustrations/Energy_Spectrum_VKP.png  used on input line 347.
 (pdftex.def)             Requested size: 167.72658pt x 125.7929pt.
+<illustrations/EnergySpectrumTrained.png, id=634, 422.0568pt x 331.7193pt>
+File: illustrations/EnergySpectrumTrained.png Graphic file (type png)
+<use illustrations/EnergySpectrumTrained.png>
+Package pdftex.def Info: illustrations/EnergySpectrumTrained.png  used on input line 347.
+(pdftex.def)             Requested size: 167.72658pt x 131.82487pt.
+
+Overfull \vbox (10.51942pt too high) detected at line 347
+ []
+
 
 Overfull \hbox (26.13426pt too wide) has occurred while \output is active
  [][]  \T1/cmss/m/n/6 ([])  
@@ -1368,24 +1376,16 @@ Overfull \hbox (26.13426pt too wide) has occurred while \output is active
 
 [19
 
- <./illustrations/TransVelIncrAngles.png> <./illustrations/LongVelIncrAngles.png>]
-Overfull \hbox (26.13426pt too wide) in paragraph at lines 345--345
+ <./illustrations/EnergySpectrumTrained.png>]
+Overfull \hbox (26.13426pt too wide) in paragraph at lines 355--355
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
-File: illustrations/Energy_Spectrum_VKP.png Graphic file (type png)
-<use illustrations/Energy_Spectrum_VKP.png>
-Package pdftex.def Info: illustrations/Energy_Spectrum_VKP.png  used on input line 345.
-(pdftex.def)             Requested size: 167.72658pt x 125.7929pt.
-<illustrations/EnergySpectrumTrained.png, id=664, 422.0568pt x 331.7193pt>
-File: illustrations/EnergySpectrumTrained.png Graphic file (type png)
-<use illustrations/EnergySpectrumTrained.png>
-Package pdftex.def Info: illustrations/EnergySpectrumTrained.png  used on input line 345.
-(pdftex.def)             Requested size: 167.72658pt x 131.82487pt.
-
-Overfull \vbox (10.51942pt too high) detected at line 345
- []
-
+<illustrations/AnglesDistributionLearned.png, id=664, 859.2903pt x 281.853pt>
+File: illustrations/AnglesDistributionLearned.png Graphic file (type png)
+<use illustrations/AnglesDistributionLearned.png>
+Package pdftex.def Info: illustrations/AnglesDistributionLearned.png  used on input line 355.
+(pdftex.def)             Requested size: 342.2953pt x 112.27472pt.
 
 Overfull \hbox (26.13426pt too wide) has occurred while \output is active
  [][]  \T1/cmss/m/n/6 ([])  
@@ -1393,16 +1393,21 @@ Overfull \hbox (26.13426pt too wide) has occurred while \output is active
 
 [20
 
- <./illustrations/EnergySpectrumTrained.png>]
-Overfull \hbox (26.13426pt too wide) in paragraph at lines 353--353
+ <./illustrations/AnglesDistributionLearned.png>]
+Overfull \hbox (26.13426pt too wide) in paragraph at lines 367--367
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
-<illustrations/AnglesDistributionLearned.png, id=693, 859.2903pt x 281.853pt>
-File: illustrations/AnglesDistributionLearned.png Graphic file (type png)
-<use illustrations/AnglesDistributionLearned.png>
-Package pdftex.def Info: illustrations/AnglesDistributionLearned.png  used on input line 353.
-(pdftex.def)             Requested size: 342.2953pt x 112.27472pt.
+<illustrations/VelIncrAnglesRMS4.1.png, id=693, 462.528pt x 346.896pt>
+File: illustrations/VelIncrAnglesRMS4.1.png Graphic file (type png)
+<use illustrations/VelIncrAnglesRMS4.1.png>
+Package pdftex.def Info: illustrations/VelIncrAnglesRMS4.1.png  used on input line 367.
+(pdftex.def)             Requested size: 167.72658pt x 125.7929pt.
+<illustrations/VelIncrAnglesRMS4.2.png, id=694, 462.528pt x 346.896pt>
+File: illustrations/VelIncrAnglesRMS4.2.png Graphic file (type png)
+<use illustrations/VelIncrAnglesRMS4.2.png>
+Package pdftex.def Info: illustrations/VelIncrAnglesRMS4.2.png  used on input line 367.
+(pdftex.def)             Requested size: 167.72658pt x 125.7929pt.
 
 Overfull \hbox (26.13426pt too wide) has occurred while \output is active
  [][]  \T1/cmss/m/n/6 ([])  
@@ -1410,21 +1415,20 @@ Overfull \hbox (26.13426pt too wide) has occurred while \output is active
 
 [21
 
- <./illustrations/AnglesDistributionLearned.png>]
-Overfull \hbox (26.13426pt too wide) in paragraph at lines 365--365
+ <./illustrations/VelIncrAnglesRMS4.1.png> <./illustrations/VelIncrAnglesRMS4.2.png>]
+Overfull \hbox (26.13426pt too wide) in paragraph at lines 399--399
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
-<illustrations/VelIncrAnglesRMS4.1.png, id=722, 462.528pt x 346.896pt>
-File: illustrations/VelIncrAnglesRMS4.1.png Graphic file (type png)
-<use illustrations/VelIncrAnglesRMS4.1.png>
-Package pdftex.def Info: illustrations/VelIncrAnglesRMS4.1.png  used on input line 365.
-(pdftex.def)             Requested size: 167.72658pt x 125.7929pt.
-<illustrations/VelIncrAnglesRMS4.2.png, id=723, 462.528pt x 346.896pt>
-File: illustrations/VelIncrAnglesRMS4.2.png Graphic file (type png)
-<use illustrations/VelIncrAnglesRMS4.2.png>
-Package pdftex.def Info: illustrations/VelIncrAnglesRMS4.2.png  used on input line 365.
-(pdftex.def)             Requested size: 167.72658pt x 125.7929pt.
+<illustrations/EnerSpectAnglesRMS.png, id=723, 462.528pt x 346.896pt>
+File: illustrations/EnerSpectAnglesRMS.png Graphic file (type png)
+<use illustrations/EnerSpectAnglesRMS.png>
+Package pdftex.def Info: illustrations/EnerSpectAnglesRMS.png  used on input line 399.
+(pdftex.def)             Requested size: 171.14764pt x 128.36009pt.
+
+Overfull \vbox (7.05464pt too high) detected at line 399
+ []
+
 
 Overfull \hbox (26.13426pt too wide) has occurred while \output is active
  [][]  \T1/cmss/m/n/6 ([])  
@@ -1432,18 +1436,9 @@ Overfull \hbox (26.13426pt too wide) has occurred while \output is active
 
 [22
 
- <./illustrations/VelIncrAnglesRMS4.1.png> <./illustrations/VelIncrAnglesRMS4.2.png>]
-Overfull \hbox (26.13426pt too wide) in paragraph at lines 397--397
+ <./illustrations/EnerSpectAnglesRMS.png>]
+Overfull \hbox (26.13426pt too wide) in paragraph at lines 419--419
  [][]  \T1/cmss/m/n/6 ([])  
- []
-
-<illustrations/EnerSpectAnglesRMS.png, id=754, 462.528pt x 346.896pt>
-File: illustrations/EnerSpectAnglesRMS.png Graphic file (type png)
-<use illustrations/EnerSpectAnglesRMS.png>
-Package pdftex.def Info: illustrations/EnerSpectAnglesRMS.png  used on input line 397.
-(pdftex.def)             Requested size: 171.14764pt x 128.36009pt.
-
-Overfull \vbox (7.05464pt too high) detected at line 397
  []
 
 
@@ -1452,30 +1447,6 @@ Overfull \hbox (26.13426pt too wide) has occurred while \output is active
  []
 
 [23
-
- <./illustrations/EnerSpectAnglesRMS.png>]
-Overfull \hbox (26.13426pt too wide) in paragraph at lines 401--401
- [][]  \T1/cmss/m/n/6 ([])  
- []
-
-
-Overfull \hbox (26.13426pt too wide) has occurred while \output is active
- [][]  \T1/cmss/m/n/6 ([])  
- []
-
-[24
-
-]
-Overfull \hbox (26.13426pt too wide) in paragraph at lines 416--416
- [][]  \T1/cmss/m/n/6 ([])  
- []
-
-
-Overfull \hbox (26.13426pt too wide) has occurred while \output is active
- [][]  \T1/cmss/m/n/6 ([])  
- []
-
-[25
 
 ]
 \tf@nav=\write8
@@ -1493,24 +1464,24 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `soutenance.out' has not changed.
-(rerunfilecheck)             Checksum: 5FA7DF0C1B6B50396C0667206810EA64;1242.
+(rerunfilecheck)             Checksum: 9A34750E5BECEABAC6245DE1FD8D3E5D;1242.
 Package logreq Info: Writing requests to 'soutenance.run.xml'.
 \openout1 = `soutenance.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33254 strings out of 474222
- 696596 string characters out of 5748733
+ 33239 strings out of 474222
+ 696240 string characters out of 5748733
  1940975 words of memory out of 5000000
- 54884 multiletter control sequences out of 15000+600000
+ 54873 multiletter control sequences out of 15000+600000
  581445 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,16n,123p,1979b,900s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsi1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss0600.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on soutenance.pdf (25 pages, 841796 bytes).
+Output written on soutenance.pdf (23 pages, 777363 bytes).
 PDF statistics:
- 935 PDF objects out of 1000 (max. 8388607)
- 781 compressed objects within 8 object streams
- 61 named destinations out of 1000 (max. 500000)
- 309 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 877 PDF objects out of 1000 (max. 8388607)
+ 729 compressed objects within 8 object streams
+ 57 named destinations out of 1000 (max. 500000)
+ 304 words of extra memory for PDF output out of 10000 (max. 10000000)
 
