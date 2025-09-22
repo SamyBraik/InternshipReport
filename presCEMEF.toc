@@ -2,5 +2,4 @@
 \beamer@sectionintoc {2}{Model}{3}{0}{2}
 \beamer@subsectionintoc {2}{1}{Random Fourier model}{3}{0}{2}
 \beamer@subsectionintoc {2}{2}{Energy spectrum}{6}{0}{2}
-\beamer@subsectionintoc {2}{3}{Optimizing $(\varphi ,\theta ,\alpha )$}{8}{0}{2}
-\beamer@sectionintoc {3}{Conclusion}{10}{0}{3}
+\beamer@subsectionintoc {2}{3}{Optimizing $(\varphi ,\theta ,\alpha )$}{7}{0}{2}

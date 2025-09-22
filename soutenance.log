@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.11)  10 SEP 2025 15:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.11)  22 SEP 2025 16:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -673,7 +673,7 @@ Package biblatex Info: ... file 'blx-dm.def' found.
 File: blx-dm.def 2023/03/05 v3.19 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex style data model...
-Package biblatex Info: ... file 'numeric.dbx' not found.
+Package biblatex Info: ... file 'authoryear.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \c@afterword=\count401
@@ -763,6 +763,16 @@ Package biblatex Info: ... file 'blx-compat.def' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def
 File: blx-compat.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
 )
+Package biblatex Info: Trying to load BibTeX backend compatibility...
+Package biblatex Info: ... file 'blx-bibtex.def' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-bibtex.def
+File: blx-bibtex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
+
+
+Package biblatex Warning: Using fall-back bibtex backend:
+(biblatex)                functionality may be reduced/unavailable.
+
+)
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
@@ -781,10 +791,16 @@ File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
 \biburllcskip=\muskip21
 \c@smartand=\count477
 )
-Package biblatex Info: Trying to load bibliography style 'numeric'...
-Package biblatex Info: ... file 'numeric.bbx' found.
- (/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
-File: numeric.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load natbib compatibility...
+Package biblatex Info: ... file 'blx-natbib.def' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-natbib.def
+File: blx-natbib.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
+Package biblatex Info: Delimiter 'nameyeardelim' in context '' already defined, overwriting.
+)
+Package biblatex Info: Trying to load bibliography style 'authoryear'...
+Package biblatex Info: ... file 'authoryear.bbx' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
+File: authoryear.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
@@ -792,21 +808,17 @@ File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
 \c@bbx:relatedcount=\count478
 \c@bbx:relatedtotal=\count479
 ))
-Package biblatex Info: Trying to load citation style 'numeric'...
-Package biblatex Info: ... file 'numeric.cbx' found.
- (/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
-File: numeric.cbx 2023/03/05 v3.19 biblatex citation style (PK/MW)
+Package biblatex Info: Trying to load citation style 'authoryear'...
+Package biblatex Info: ... file 'authoryear.cbx' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx
+File: authoryear.cbx 2023/03/05 v3.19 biblatex citation style (PK/MW)
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
 Package biblatex Info: Redefining '\footcitetext'.
 Package biblatex Info: Redefining '\smartcite'.
-Package biblatex Info: Redefining '\supercite'.
 Package biblatex Info: Redefining '\textcite'.
 Package biblatex Info: Redefining '\textcites'.
-Package biblatex Info: Redefining '\cites'.
-Package biblatex Info: Redefining '\parencites'.
-Package biblatex Info: Redefining '\smartcites'.
 )
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
@@ -835,32 +847,32 @@ Package: blx-case-expl3 2023/03/05 v3.19 expl3 case changing code for biblatex
  Excluding comment 'comment')
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 20.
+(hyperref)                removing `\\' on input line 18.
 
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 26.
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 24.
 \@quotelevel=\count481
 \@quotereset=\count482
 (./soutenance.aux)
 \openout1 = `soutenance.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -915,64 +927,64 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 26.
+Package hyperref Info: Link coloring OFF on input line 24.
  (./soutenance.out) (./soutenance.out)
 \@outlinefile=\write7
 \openout7 = `soutenance.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 26.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 24.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 26.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 24.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/cmr/m/n on input line 26.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 26.
+(Font)                  OT1/cmss/m/n --> T1/cmr/m/n on input line 24.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 24.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> T1/cmss/b/n on input line 26.
+(Font)                  OT1/cmr/bx/n --> T1/cmss/b/n on input line 24.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> T1/cmss/b/n on input line 26.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 26.
+(Font)                  OT1/cmr/bx/n --> T1/cmss/b/n on input line 24.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 24.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/cmss/m/n on input line 26.
+(Font)                  OT1/cmss/m/n --> T1/cmss/m/n on input line 24.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> T1/cmss/m/n on input line 26.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 26.
+(Font)                  OT1/cmss/bx/n --> T1/cmss/m/n on input line 24.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 24.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> T1/cmss/m/it on input line 26.
+(Font)                  OT1/cmr/m/it --> T1/cmss/m/it on input line 24.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> T1/cmss/m/it on input line 26.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 26.
+(Font)                  OT1/cmr/bx/it --> T1/cmss/m/it on input line 24.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 24.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 26.
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 24.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 26.
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 24.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  T1/cmss/m/n --> T1/cmss/b/n on input line 26.
+(Font)                  T1/cmss/m/n --> T1/cmss/b/n on input line 24.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/cmss/m/it --> T1/cmss/b/it on input line 26.
+(Font)                  T1/cmss/m/it --> T1/cmss/b/it on input line 24.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/b/n --> T1/cmr/b/n on input line 26.
+(Font)                  OT1/cmss/b/n --> T1/cmr/b/n on input line 24.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  T1/cmss/b/n --> T1/cmss/b/n on input line 26.
+(Font)                  T1/cmss/b/n --> T1/cmss/b/n on input line 24.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/cmss/m/n --> T1/cmss/b/n on input line 26.
+(Font)                  T1/cmss/m/n --> T1/cmss/b/n on input line 24.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/cmss/m/it --> T1/cmss/b/it on input line 26.
+(Font)                  T1/cmss/m/it --> T1/cmss/b/it on input line 24.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/cmtt/m/n --> T1/cmtt/b/n on input line 26.
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 26.
+(Font)                  T1/cmtt/m/n --> T1/cmtt/b/n on input line 24.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 24.
 LaTeX Font Info:    Encoding `T1' has changed to `OT1' for symbol font
-(Font)              `pureletters' in the math version `normal' on input line 26.
+(Font)              `pureletters' in the math version `normal' on input line 24.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
-(Font)                  T1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 26.
+(Font)                  T1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 24.
 LaTeX Font Info:    Encoding `T1' has changed to `OT1' for symbol font
-(Font)              `pureletters' in the math version `bold' on input line 26.
+(Font)              `pureletters' in the math version `bold' on input line 24.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 26.
+(Font)                  T1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 24.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on input line 26.
+(Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on input line 24.
  (/usr/share/texlive/texmf-dist/tex/latex/translator/translator-basic-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 ) (/usr/share/texlive/texmf-dist/tex/latex/translator/translator-bibliography-dictionary-English.dict
@@ -988,7 +1000,7 @@ Dictionary: translator-theorem-dictionary, Language: English
 ) (/usr/share/texlive/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 26.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 24.
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
@@ -997,312 +1009,473 @@ File: english.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout5 = `soutenance.bcf'.
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Data encoding 'utf8' specified.
+(biblatex)             No need to reencode data.
+\openout5 = `soutenance-blx.bib'.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'soutenance.bbl' found.
  (./soutenance.bbl)
-Package biblatex Info: Reference section=0 on input line 26.
-Package biblatex Info: Reference segment=0 on input line 26.
+Package biblatex Info: Reference section=0 on input line 24.
+Package biblatex Info: Reference segment=0 on input line 24.
  (./soutenance.nav)
-Overfull \hbox (35.52684pt too wide) in paragraph at lines 26--26
+Overfull \hbox (26.13426pt too wide) in paragraph at lines 24--24
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
 
-Overfull \hbox (35.52684pt too wide) in paragraph at lines 30--30
+Overfull \hbox (26.13426pt too wide) in paragraph at lines 29--29
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 30.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 29.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 30.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 29.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 30.
+LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 29.
  (/usr/share/texlive/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mathkerncmss.
 )
-Overfull \hbox (35.52684pt too wide) has occurred while \output is active
+Overfull \hbox (26.13426pt too wide) has occurred while \output is active
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
-Overfull \hbox (35.52684pt too wide) in paragraph at lines 34--34
+Overfull \hbox (26.13426pt too wide) in paragraph at lines 33--33
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
 (./soutenance.toc)
-Overfull \hbox (35.52684pt too wide) has occurred while \output is active
+Overfull \hbox (26.13426pt too wide) has occurred while \output is active
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
 [2
 
 ]
-Overfull \hbox (35.52684pt too wide) in paragraph at lines 49--49
+Overfull \hbox (26.13426pt too wide) in paragraph at lines 48--48
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
-<illustrations/TurbulenceExample.jpg, id=142, 501.875pt x 432.61626pt>
+<illustrations/TurbulenceExample.jpg, id=141, 501.875pt x 432.61626pt>
 File: illustrations/TurbulenceExample.jpg Graphic file (type jpg)
 <use illustrations/TurbulenceExample.jpg>
-Package pdftex.def Info: illustrations/TurbulenceExample.jpg  used on input line 49.
+Package pdftex.def Info: illustrations/TurbulenceExample.jpg  used on input line 48.
 (pdftex.def)             Requested size: 171.14764pt x 147.52986pt.
 
-Overfull \vbox (6.85808pt too high) detected at line 49
+Overfull \vbox (6.85808pt too high) detected at line 48
  []
 
 
-Overfull \hbox (35.52684pt too wide) has occurred while \output is active
+Overfull \hbox (26.13426pt too wide) has occurred while \output is active
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
 [3
 
  <./illustrations/TurbulenceExample.jpg>]
-Overfull \hbox (35.52684pt too wide) in paragraph at lines 68--68
+Overfull \hbox (26.13426pt too wide) in paragraph at lines 67--67
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
 
-Overfull \hbox (35.52684pt too wide) has occurred while \output is active
+Overfull \hbox (26.13426pt too wide) has occurred while \output is active
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
 [4
 
 ]
-Overfull \hbox (35.52684pt too wide) in paragraph at lines 86--86
+Overfull \hbox (26.13426pt too wide) in paragraph at lines 85--85
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
 
-Overfull \hbox (35.52684pt too wide) has occurred while \output is active
+Overfull \hbox (26.13426pt too wide) has occurred while \output is active
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
 [5
 
 ]
-Overfull \hbox (35.52684pt too wide) in paragraph at lines 103--103
+Overfull \hbox (26.13426pt too wide) in paragraph at lines 93--93
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
-<illustrations/Energy_Spectrum_VKP.png, id=238, 462.528pt x 346.896pt>
-File: illustrations/Energy_Spectrum_VKP.png Graphic file (type png)
-<use illustrations/Energy_Spectrum_VKP.png>
-Package pdftex.def Info: illustrations/Energy_Spectrum_VKP.png  used on input line 103.
-(pdftex.def)             Requested size: 205.37926pt x 154.0374pt.
+<illustrations/WaveVectorGeometry.png, id=231, 476.78125pt x 483.8075pt>
+File: illustrations/WaveVectorGeometry.png Graphic file (type png)
+<use illustrations/WaveVectorGeometry.png>
+Package pdftex.def Info: illustrations/WaveVectorGeometry.png  used on input line 93.
+(pdftex.def)             Requested size: 205.37926pt x 208.40967pt.
 
-Overfull \vbox (66.3244pt too high) detected at line 103
- []
-
-
-Overfull \hbox (35.52684pt too wide) has occurred while \output is active
+Overfull \hbox (26.13426pt too wide) has occurred while \output is active
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
 [6
 
- <./illustrations/Energy_Spectrum_VKP.png>]
-Overfull \hbox (35.52684pt too wide) in paragraph at lines 113--113
+ <./illustrations/WaveVectorGeometry.png>]
+Overfull \hbox (26.13426pt too wide) in paragraph at lines 105--105
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
+<illustrations/energy-spectrum-example.png, id=260, 853.1875pt x 618.31pt>
+File: illustrations/energy-spectrum-example.png Graphic file (type png)
+<use illustrations/energy-spectrum-example.png>
+Package pdftex.def Info: illustrations/energy-spectrum-example.png  used on input line 105.
+(pdftex.def)             Requested size: 239.60567pt x 173.64452pt.
 
-Overfull \hbox (35.52684pt too wide) has occurred while \output is active
+Overfull \vbox (5.82556pt too high) detected at line 105
+ []
+
+
+Overfull \hbox (26.13426pt too wide) has occurred while \output is active
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
 [7
 
-]
-Overfull \hbox (35.52684pt too wide) in paragraph at lines 139--139
+ <./illustrations/energy-spectrum-example.png>]
+Overfull \hbox (26.13426pt too wide) in paragraph at lines 120--120
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
+<illustrations/Energy_Spectrum_VKP.png, id=291, 462.528pt x 346.896pt>
+File: illustrations/Energy_Spectrum_VKP.png Graphic file (type png)
+<use illustrations/Energy_Spectrum_VKP.png>
+Package pdftex.def Info: illustrations/Energy_Spectrum_VKP.png  used on input line 120.
+(pdftex.def)             Requested size: 201.95297pt x 151.4649pt.
 
-Overfull \hbox (35.52684pt too wide) has occurred while \output is active
+Overfull \vbox (13.37714pt too high) detected at line 120
+ []
+
+
+Overfull \hbox (26.13426pt too wide) has occurred while \output is active
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
 [8
 
-]
-Overfull \hbox (35.52684pt too wide) in paragraph at lines 153--153
+ <./illustrations/Energy_Spectrum_VKP.png>]
+Overfull \hbox (26.13426pt too wide) in paragraph at lines 130--130
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
-<illustrations/TransVelIncrExample.png, id=333, 445.665pt x 327.47343pt>
-File: illustrations/TransVelIncrExample.png Graphic file (type png)
-<use illustrations/TransVelIncrExample.png>
-Package pdftex.def Info: illustrations/TransVelIncrExample.png  used on input line 153.
-(pdftex.def)             Requested size: 154.03183pt x 113.18332pt.
-<illustrations/LongVelIncrExample.png, id=334, 450.18187pt x 327.47343pt>
-File: illustrations/LongVelIncrExample.png Graphic file (type png)
-<use illustrations/LongVelIncrExample.png>
-Package pdftex.def Info: illustrations/LongVelIncrExample.png  used on input line 153.
-(pdftex.def)             Requested size: 154.03183pt x 112.04405pt.
 
-Overfull \hbox (35.52684pt too wide) has occurred while \output is active
+Overfull \hbox (26.13426pt too wide) has occurred while \output is active
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
 [9
 
- <./illustrations/TransVelIncrExample.png> <./illustrations/LongVelIncrExample.png>]
-Overfull \hbox (35.52684pt too wide) in paragraph at lines 161--161
+]
+Overfull \hbox (26.13426pt too wide) in paragraph at lines 149--149
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
-<illustrations/Velocity_Example.png, id=363, 406.8801pt x 328.8285pt>
-File: illustrations/Velocity_Example.png Graphic file (type png)
-<use illustrations/Velocity_Example.png>
-Package pdftex.def Info: illustrations/Velocity_Example.png  used on input line 161.
-(pdftex.def)             Requested size: 205.37926pt x 165.97931pt.
 
-Overfull \hbox (35.52684pt too wide) has occurred while \output is active
+Overfull \hbox (26.13426pt too wide) has occurred while \output is active
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
 [10
 
- <./illustrations/Velocity_Example.png>]
-Overfull \hbox (35.52684pt too wide) in paragraph at lines 170--170
+]
+Overfull \hbox (26.13426pt too wide) in paragraph at lines 175--175
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
 
-Overfull \hbox (35.52684pt too wide) has occurred while \output is active
+Overfull \hbox (26.13426pt too wide) has occurred while \output is active
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
 [11
 
 ]
-Overfull \hbox (35.52684pt too wide) in paragraph at lines 185--185
+Overfull \hbox (26.13426pt too wide) in paragraph at lines 189--189
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
+<illustrations/TransVelIncrExample.png, id=404, 445.665pt x 327.47343pt>
+File: illustrations/TransVelIncrExample.png Graphic file (type png)
+<use illustrations/TransVelIncrExample.png>
+Package pdftex.def Info: illustrations/TransVelIncrExample.png  used on input line 189.
+(pdftex.def)             Requested size: 154.03183pt x 113.18332pt.
+<illustrations/LongVelIncrExample.png, id=405, 450.18187pt x 327.47343pt>
+File: illustrations/LongVelIncrExample.png Graphic file (type png)
+<use illustrations/LongVelIncrExample.png>
+Package pdftex.def Info: illustrations/LongVelIncrExample.png  used on input line 189.
+(pdftex.def)             Requested size: 154.03183pt x 112.04405pt.
 
-Overfull \hbox (35.52684pt too wide) has occurred while \output is active
+Overfull \hbox (26.13426pt too wide) has occurred while \output is active
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
 [12
 
-]
-Overfull \hbox (35.52684pt too wide) in paragraph at lines 199--199
+ <./illustrations/TransVelIncrExample.png> <./illustrations/LongVelIncrExample.png>]
+Overfull \hbox (26.13426pt too wide) in paragraph at lines 197--197
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
-<illustrations/StartGaussian.png, id=481, 895.09406pt x 293.59688pt>
-File: illustrations/StartGaussian.png Graphic file (type png)
-<use illustrations/StartGaussian.png>
-Package pdftex.def Info: illustrations/StartGaussian.png  used on input line 199.
-(pdftex.def)             Requested size: 308.06367pt x 101.0491pt.
+<illustrations/Velocity_Example.png, id=432, 406.8801pt x 328.8285pt>
+File: illustrations/Velocity_Example.png Graphic file (type png)
+<use illustrations/Velocity_Example.png>
+Package pdftex.def Info: illustrations/Velocity_Example.png  used on input line 197.
+(pdftex.def)             Requested size: 205.37926pt x 165.97931pt.
 
-Overfull \hbox (35.52684pt too wide) has occurred while \output is active
+Overfull \hbox (26.13426pt too wide) has occurred while \output is active
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
 [13
 
- <./illustrations/StartGaussian.png>]
-Overfull \hbox (35.52684pt too wide) in paragraph at lines 210--210
+ <./illustrations/Velocity_Example.png>]
+Overfull \hbox (26.13426pt too wide) in paragraph at lines 206--206
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
-<illustrations/StartHeavyTail.png, id=512, 895.09406pt x 293.59688pt>
-File: illustrations/StartHeavyTail.png Graphic file (type png)
-<use illustrations/StartHeavyTail.png>
-Package pdftex.def Info: illustrations/StartHeavyTail.png  used on input line 210.
-(pdftex.def)             Requested size: 308.06367pt x 101.0491pt.
-
-Overfull \hbox (35.52684pt too wide) has occurred while \output is active
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 206.
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+Overfull \hbox (26.13426pt too wide) has occurred while \output is active
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
 [14
 
- <./illustrations/StartHeavyTail.png>]
-Overfull \hbox (35.52684pt too wide) in paragraph at lines 216--216
+]
+Overfull \hbox (26.13426pt too wide) in paragraph at lines 227--227
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
 
-Overfull \hbox (35.52684pt too wide) has occurred while \output is active
+Overfull \hbox (26.13426pt too wide) has occurred while \output is active
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
 [15
 
 ]
-Overfull \hbox (35.52684pt too wide) in paragraph at lines 224--224
+Overfull \hbox (26.13426pt too wide) in paragraph at lines 241--241
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
-<illustrations/AnglesDistributionLearned.png, id=570, 859.2903pt x 281.853pt>
-File: illustrations/AnglesDistributionLearned.png Graphic file (type png)
-<use illustrations/AnglesDistributionLearned.png>
-Package pdftex.def Info: illustrations/AnglesDistributionLearned.png  used on input line 224.
-(pdftex.def)             Requested size: 342.2953pt x 112.27472pt.
+<illustrations/StartGaussian.png, id=546, 895.09406pt x 293.59688pt>
+File: illustrations/StartGaussian.png Graphic file (type png)
+<use illustrations/StartGaussian.png>
+Package pdftex.def Info: illustrations/StartGaussian.png  used on input line 241.
+(pdftex.def)             Requested size: 308.06367pt x 101.0491pt.
 
-Overfull \hbox (35.52684pt too wide) has occurred while \output is active
+Overfull \hbox (26.13426pt too wide) has occurred while \output is active
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
 [16
 
- <./illustrations/AnglesDistributionLearned.png>]
-Overfull \hbox (35.52684pt too wide) in paragraph at lines 232--232
+ <./illustrations/StartGaussian.png>] Excluding 'comment' comment.
+Overfull \hbox (26.13426pt too wide) in paragraph at lines 266--266
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
+<VelIncrPSIKAPPASIGMA/VelIncrLong.png, id=573, 432.1746pt x 314.3745pt>
+File: VelIncrPSIKAPPASIGMA/VelIncrLong.png Graphic file (type png)
+<use VelIncrPSIKAPPASIGMA/VelIncrLong.png>
+Package pdftex.def Info: VelIncrPSIKAPPASIGMA/VelIncrLong.png  used on input line 266.
+(pdftex.def)             Requested size: 154.03183pt x 112.04263pt.
+<VelIncrPSIKAPPASIGMA/VelIncrTrans.png, id=574, 427.8384pt x 314.3745pt>
+File: VelIncrPSIKAPPASIGMA/VelIncrTrans.png Graphic file (type png)
+<use VelIncrPSIKAPPASIGMA/VelIncrTrans.png>
+Package pdftex.def Info: VelIncrPSIKAPPASIGMA/VelIncrTrans.png  used on input line 266.
+(pdftex.def)             Requested size: 154.03183pt x 113.18431pt.
 
-Overfull \hbox (35.52684pt too wide) has occurred while \output is active
+Overfull \hbox (26.13426pt too wide) has occurred while \output is active
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
 [17
 
-] Excluding 'comment' comment.
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\translate ' on input line 255.
-
-
-Overfull \hbox (35.52684pt too wide) in paragraph at lines 272--272
+ <./VelIncrPSIKAPPASIGMA/VelIncrLong.png> <./VelIncrPSIKAPPASIGMA/VelIncrTrans.png>]
+Overfull \hbox (26.13426pt too wide) in paragraph at lines 298--298
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
+<VelIncrPSIKAPPASIGMA/EnergySpectrum.png, id=604, 433.62pt x 342.5297pt>
+File: VelIncrPSIKAPPASIGMA/EnergySpectrum.png Graphic file (type png)
+<use VelIncrPSIKAPPASIGMA/EnergySpectrum.png>
+Package pdftex.def Info: VelIncrPSIKAPPASIGMA/EnergySpectrum.png  used on input line 298.
+(pdftex.def)             Requested size: 188.26346pt x 148.71698pt.
 
-Overfull \hbox (35.52684pt too wide) has occurred while \output is active
+Overfull \vbox (27.41153pt too high) detected at line 298
+ []
+
+
+Overfull \hbox (26.13426pt too wide) has occurred while \output is active
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
 [18
 
-]
-Overfull \hbox (35.52684pt too wide) in paragraph at lines 276--276
+ <./VelIncrPSIKAPPASIGMA/EnergySpectrum.png>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 300.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\varphi' on input line 300.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\theta' on input line 300.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\alpha' on input line 300.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 300.
+
+
+Overfull \hbox (26.13426pt too wide) in paragraph at lines 312--312
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
+<illustrations/TransVelIncrAngles.png, id=632, 424.9476pt x 312.9291pt>
+File: illustrations/TransVelIncrAngles.png Graphic file (type png)
+<use illustrations/TransVelIncrAngles.png>
+Package pdftex.def Info: illustrations/TransVelIncrAngles.png  used on input line 312.
+(pdftex.def)             Requested size: 167.72658pt x 123.51251pt.
+<illustrations/LongVelIncrAngles.png, id=633, 462.528pt x 346.896pt>
+File: illustrations/LongVelIncrAngles.png Graphic file (type png)
+<use illustrations/LongVelIncrAngles.png>
+Package pdftex.def Info: illustrations/LongVelIncrAngles.png  used on input line 312.
+(pdftex.def)             Requested size: 167.72658pt x 125.7929pt.
 
-LaTeX Warning: Empty bibliography on input line 276.
-
-
-Overfull \hbox (35.52684pt too wide) has occurred while \output is active
+Overfull \hbox (26.13426pt too wide) has occurred while \output is active
  [][]  \T1/cmss/m/n/6 ([])  
  []
 
 [19
+
+ <./illustrations/TransVelIncrAngles.png> <./illustrations/LongVelIncrAngles.png>]
+Overfull \hbox (26.13426pt too wide) in paragraph at lines 345--345
+ [][]  \T1/cmss/m/n/6 ([])  
+ []
+
+File: illustrations/Energy_Spectrum_VKP.png Graphic file (type png)
+<use illustrations/Energy_Spectrum_VKP.png>
+Package pdftex.def Info: illustrations/Energy_Spectrum_VKP.png  used on input line 345.
+(pdftex.def)             Requested size: 167.72658pt x 125.7929pt.
+<illustrations/EnergySpectrumTrained.png, id=664, 422.0568pt x 331.7193pt>
+File: illustrations/EnergySpectrumTrained.png Graphic file (type png)
+<use illustrations/EnergySpectrumTrained.png>
+Package pdftex.def Info: illustrations/EnergySpectrumTrained.png  used on input line 345.
+(pdftex.def)             Requested size: 167.72658pt x 131.82487pt.
+
+Overfull \vbox (10.51942pt too high) detected at line 345
+ []
+
+
+Overfull \hbox (26.13426pt too wide) has occurred while \output is active
+ [][]  \T1/cmss/m/n/6 ([])  
+ []
+
+[20
+
+ <./illustrations/EnergySpectrumTrained.png>]
+Overfull \hbox (26.13426pt too wide) in paragraph at lines 353--353
+ [][]  \T1/cmss/m/n/6 ([])  
+ []
+
+<illustrations/AnglesDistributionLearned.png, id=693, 859.2903pt x 281.853pt>
+File: illustrations/AnglesDistributionLearned.png Graphic file (type png)
+<use illustrations/AnglesDistributionLearned.png>
+Package pdftex.def Info: illustrations/AnglesDistributionLearned.png  used on input line 353.
+(pdftex.def)             Requested size: 342.2953pt x 112.27472pt.
+
+Overfull \hbox (26.13426pt too wide) has occurred while \output is active
+ [][]  \T1/cmss/m/n/6 ([])  
+ []
+
+[21
+
+ <./illustrations/AnglesDistributionLearned.png>]
+Overfull \hbox (26.13426pt too wide) in paragraph at lines 365--365
+ [][]  \T1/cmss/m/n/6 ([])  
+ []
+
+<illustrations/VelIncrAnglesRMS4.1.png, id=722, 462.528pt x 346.896pt>
+File: illustrations/VelIncrAnglesRMS4.1.png Graphic file (type png)
+<use illustrations/VelIncrAnglesRMS4.1.png>
+Package pdftex.def Info: illustrations/VelIncrAnglesRMS4.1.png  used on input line 365.
+(pdftex.def)             Requested size: 167.72658pt x 125.7929pt.
+<illustrations/VelIncrAnglesRMS4.2.png, id=723, 462.528pt x 346.896pt>
+File: illustrations/VelIncrAnglesRMS4.2.png Graphic file (type png)
+<use illustrations/VelIncrAnglesRMS4.2.png>
+Package pdftex.def Info: illustrations/VelIncrAnglesRMS4.2.png  used on input line 365.
+(pdftex.def)             Requested size: 167.72658pt x 125.7929pt.
+
+Overfull \hbox (26.13426pt too wide) has occurred while \output is active
+ [][]  \T1/cmss/m/n/6 ([])  
+ []
+
+[22
+
+ <./illustrations/VelIncrAnglesRMS4.1.png> <./illustrations/VelIncrAnglesRMS4.2.png>]
+Overfull \hbox (26.13426pt too wide) in paragraph at lines 397--397
+ [][]  \T1/cmss/m/n/6 ([])  
+ []
+
+<illustrations/EnerSpectAnglesRMS.png, id=754, 462.528pt x 346.896pt>
+File: illustrations/EnerSpectAnglesRMS.png Graphic file (type png)
+<use illustrations/EnerSpectAnglesRMS.png>
+Package pdftex.def Info: illustrations/EnerSpectAnglesRMS.png  used on input line 397.
+(pdftex.def)             Requested size: 171.14764pt x 128.36009pt.
+
+Overfull \vbox (7.05464pt too high) detected at line 397
+ []
+
+
+Overfull \hbox (26.13426pt too wide) has occurred while \output is active
+ [][]  \T1/cmss/m/n/6 ([])  
+ []
+
+[23
+
+ <./illustrations/EnerSpectAnglesRMS.png>]
+Overfull \hbox (26.13426pt too wide) in paragraph at lines 401--401
+ [][]  \T1/cmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (26.13426pt too wide) has occurred while \output is active
+ [][]  \T1/cmss/m/n/6 ([])  
+ []
+
+[24
+
+]
+Overfull \hbox (26.13426pt too wide) in paragraph at lines 416--416
+ [][]  \T1/cmss/m/n/6 ([])  
+ []
+
+
+Overfull \hbox (26.13426pt too wide) has occurred while \output is active
+ [][]  \T1/cmss/m/n/6 ([])  
+ []
+
+[25
 
 ]
 \tf@nav=\write8
@@ -1320,24 +1493,24 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `soutenance.out' has not changed.
-(rerunfilecheck)             Checksum: 93DBE57D431D5E794D42DD61F8D8BA78;1364.
+(rerunfilecheck)             Checksum: 5FA7DF0C1B6B50396C0667206810EA64;1242.
 Package logreq Info: Writing requests to 'soutenance.run.xml'.
 \openout1 = `soutenance.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33036 strings out of 474222
- 690594 string characters out of 5748733
+ 33254 strings out of 474222
+ 696596 string characters out of 5748733
  1940975 words of memory out of 5000000
- 54692 multiletter control sequences out of 15000+600000
- 578834 words of font info for 86 fonts, out of 8000000 for 9000
+ 54884 multiletter control sequences out of 15000+600000
+ 581445 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,15n,123p,729b,900s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsi1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss0600.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1095.pfb>
-Output written on soutenance.pdf (19 pages, 594457 bytes).
+ 128i,16n,123p,1979b,900s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsi1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss0600.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1095.pfb>
+Output written on soutenance.pdf (25 pages, 841796 bytes).
 PDF statistics:
- 780 PDF objects out of 1000 (max. 8388607)
- 661 compressed objects within 7 object streams
- 49 named destinations out of 1000 (max. 500000)
- 259 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 935 PDF objects out of 1000 (max. 8388607)
+ 781 compressed objects within 8 object streams
+ 61 named destinations out of 1000 (max. 500000)
+ 309 words of extra memory for PDF output out of 10000 (max. 10000000)
 

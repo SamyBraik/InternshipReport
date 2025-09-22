@@ -1,15 +1,15 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'rapport.blg'
-[83] biber:340> INFO - === jeu. sept. 11, 2025, 17:38:09
-[98] Biber.pm:419> INFO - Reading 'rapport.bcf'
-[157] Biber.pm:979> INFO - Found 7 citekeys in bib section 0
-[172] Biber.pm:4419> INFO - Processing section 0
-[182] Biber.pm:4610> INFO - Looking for bibtex file 'references.bib' for section 0
-[183] bibtex.pm:1713> INFO - LaTeX decoding ...
-[192] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
-[277] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[277] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[277] Biber.pm:4239> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[277] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[290] bbl.pm:660> INFO - Writing 'rapport.bbl' with encoding 'UTF-8'
-[294] bbl.pm:763> INFO - Output to rapport.bbl
+[79] biber:340> INFO - === lun. sept. 15, 2025, 09:14:51
+[93] Biber.pm:419> INFO - Reading 'rapport.bcf'
+[150] Biber.pm:979> INFO - Found 9 citekeys in bib section 0
+[162] Biber.pm:4419> INFO - Processing section 0
+[179] Biber.pm:4610> INFO - Looking for bibtex file 'references.bib' for section 0
+[181] bibtex.pm:1713> INFO - LaTeX decoding ...
+[196] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
+[315] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[316] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[316] Biber.pm:4239> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[316] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[329] bbl.pm:660> INFO - Writing 'rapport.bbl' with encoding 'UTF-8'
+[334] bbl.pm:763> INFO - Output to rapport.bbl

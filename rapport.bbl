@@ -49,6 +49,55 @@
       \verb 10.48550/arXiv.2101.03590
       \endverb
     \endentry
+    \entry{RANSReview}{article}{}
+      \name{author}{5}{}{%
+        {{hash=d4d193fee8bd701feaee8b37fd1ee949}{%
+           family={Che\bibnamedelima Sidik},
+           familyi={C\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Nor\bibnamedelima Azwadi},
+           giveni={N\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=71821f92e690ffa0ee730b83d66c1664}{%
+           family={Yusof},
+           familyi={Y\bibinitperiod},
+           given={Siti\bibnamedelimb Nurul\bibnamedelima Akmal},
+           giveni={S\bibinitperiod\bibinitdelim N\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=80e129dc65b0ef6aa5c81148d5f59156}{%
+           family={Asako},
+           familyi={A\bibinitperiod},
+           given={Yutaka},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=f9e146884d45b458408eba9ec6ba0cc9}{%
+           family={Mohamed},
+           familyi={M\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=247b443758f656fdb654748b458460cd}{%
+           family={Aziz},
+           familyi={A\bibinitperiod},
+           given={Arif},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{7581c6b7a1b89ce051028a33badeff30}
+      \strng{fullhash}{26ac0ec414c52944789004f8f9f6a7f9}
+      \strng{bibnamehash}{7581c6b7a1b89ce051028a33badeff30}
+      \strng{authorbibnamehash}{7581c6b7a1b89ce051028a33badeff30}
+      \strng{authornamehash}{7581c6b7a1b89ce051028a33badeff30}
+      \strng{authorfullhash}{26ac0ec414c52944789004f8f9f6a7f9}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{CFD Letters}
+      \field{month}{11}
+      \field{title}{A Short Review on RANS Turbulence Models}
+      \field{volume}{12}
+      \field{year}{2020}
+      \field{pages}{83\bibrangedash 96}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.37934/cfdl.12.11.8396
+      \endverb
+    \endentry
     \entry{GotohVelIncr}{article}{}
       \name{author}{3}{}{%
         {{hash=021f9810b7839118808dabf8ae431a5e}{%
@@ -142,6 +191,43 @@
       \range{pages}{1}
       \verb{doi}
       \verb 10.1063/5.0045818
+      \endverb
+    \endentry
+    \entry{JIMENEZ1998405}{article}{}
+      \name{author}{1}{}{%
+        {{hash=54ab69350a6ee858438f66246d7d4b27}{%
+           family={Jiménez},
+           familyi={J\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{54ab69350a6ee858438f66246d7d4b27}
+      \strng{fullhash}{54ab69350a6ee858438f66246d7d4b27}
+      \strng{bibnamehash}{54ab69350a6ee858438f66246d7d4b27}
+      \strng{authorbibnamehash}{54ab69350a6ee858438f66246d7d4b27}
+      \strng{authornamehash}{54ab69350a6ee858438f66246d7d4b27}
+      \strng{authorfullhash}{54ab69350a6ee858438f66246d7d4b27}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The present theoretical and experimental knowledge of the intense intermittent events in high Reynolds number turbulence is reviewed. An attempt is made to relate the two main streams of research in this area: the multifractal description and the coherent filaments identified in numerical simulations. It is concluded that, although both approaches can be expressed in a common language, they are inconsistent in detail and both are incomplete. While the multifractal approach is a kinematic description without dynamics, the present understanding of the scaling and dynamics of the coherent vortices requires the existence of stable laminar structures of arbitrarily large Reynolds numbers, and probably represents only one of a hierarchy of intermittent objects. It is suggested that the vortices may not survive at very high values of Reλ, and that the problem extends to all the intermittent structures of turbulence. It is shown that the filaments should dominate the structure functions in a range of scales that goes from beyond the Kolmogorov scale for p < 4 to the whole inertial range if the scaling exponent ζp → ∞ (usually expected as p → ∞.)}
+      \field{issn}{0997-7546}
+      \field{journaltitle}{European Journal of Mechanics - B/Fluids}
+      \field{number}{4}
+      \field{title}{Small scale intermittency in turbulence}
+      \field{volume}{17}
+      \field{year}{1998}
+      \field{pages}{405\bibrangedash 419}
+      \range{pages}{15}
+      \verb{doi}
+      \verb https://doi.org/10.1016/S0997-7546(98)80002-2
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0997754698800022
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0997754698800022
       \endverb
     \endentry
     \entry{parikh2025conditionalflowmatchinggenerative}{misc}{}

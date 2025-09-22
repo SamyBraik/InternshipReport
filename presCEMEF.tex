@@ -7,8 +7,6 @@
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{siunitx}
-\usepackage[backend=biber,style=numeric,citestyle=numeric]{biblatex}
-\addbibresource{references.bib}
 \usepackage{comment}
 % \usepackage[hidelinks]{hyperref}
 
@@ -210,7 +208,7 @@ statistical methods}
 \end{frame}
 \end{comment}
 
-
+\begin{comment}
 \begin{frame}{Losses}
   \begin{block}{Flatness (excess kurtosis) objective}
     \begin{itemize}
@@ -232,7 +230,7 @@ statistical methods}
   \centering Combined loss: $\mathcal{L}=\mathcal{L}_F + 10^3\mathcal{L}_{ES}$
 \end{frame}
 
-\begin{comment}
+
 \subsection{Preliminary experiments}
 \begin{frame}{Preliminary experiments}
   \begin{itemize}
@@ -306,14 +304,10 @@ statistical methods}
 
 
 \subsection{Optimizing $(\varphi,\theta,\alpha)$}
-\begin{frame}{Angles}
-  \begin{itemize}
-    \item Shift the focus solely on the angles $(\varphi,\theta,\alpha)$.
-    \item Ensure the condition $\kappa\cdot\sigma=0$.
-  \end{itemize}
+\begin{frame}{Results}
   \begin{figure}
     \centering
-    \includegraphics[width=0.49\textwidth]{illustrations/TransVelIncrAngles.png}
+    \includegraphics[width=0.47\textwidth]{illustrations/TransVelIncrAngles.png}
     \includegraphics[width=0.49\textwidth]{illustrations/LongVelIncrAngles.png}
     \caption{Velocity increments after learning on $(\varphi,\theta,\alpha)$}
   \end{figure}
@@ -322,7 +316,7 @@ statistical methods}
 \begin{frame}
   \begin{figure}
     \centering
-    \includegraphics[width=0.5\textwidth]{illustrations/Energy_Spectrum_VKP.png}
+    \includegraphics[width=0.49\textwidth]{illustrations/EnergySpectrumTrained.png}
     \caption{Energy spectrum reconstructed with the learned $(\varphi,\theta,\alpha)$}
   \end{figure}
 
@@ -351,52 +345,13 @@ statistical methods}
   \end{table}
 \end{frame}
 
-
-\section{Conclusion}
-
-\begin{frame}{Distribution shift}
-    \begin{figure}
-        \centering
-        \includegraphics[width=1\linewidth]{illustrations/AnglesDistributionLearned.png}
-        \caption{Learned angles distributions}
-    \end{figure}
+\begin{frame}{Vorticity}
+  \begin{figure}
+    \centering
+    \includegraphics[width=0.65\textwidth]{illustrations/vorticity.png}
+    \includegraphics[width=0.49\textwidth]{illustrations/vorticity-cutplane.png}
+    \caption{Vorticity field after learning on $(\varphi,\theta,\alpha)$}
+  \end{figure}
 \end{frame}
-
-\begin{frame}{Conclusion}
-  \begin{itemize}
-    \item The Random Fourier model can be steered (via angles) to modify increment statistics while preserving spectral fidelity.
-    \item Trade-offs observed: stronger heavy tails sometimes perturb RMS.
-  \end{itemize}
-
-  Future work : 
-  \begin{itemize}
-    \item Incorporate time dependence (non-frozen turbulence).
-    \item Change the turbulence hypothesis.
-  \end{itemize}
-\end{frame}
-
-% \section{Conclusion \& Future Work}
-% \begin{frame}{Conclusion}
-%   \begin{itemize}
-%     \item Random Fourier is a flexible and interpretable model for synthetic HIT.
-%     \item Optimising coefficients can introduce realistic intermittency (heavy tails) while preserving primary statistics.
-%     \item Regularisation and composite losses are crucial to maintain spectral fidelity and isotropy.
-%   \end{itemize}
-% \end{frame}
-
-% \begin{frame}{Future work}
-%   \begin{itemize}
-%     %\item Explore richer parameterization (e.g. correlated phases, amplitude stochasticity).
-%     \item Incorporate time dependence (non-frozen turbulence) and match temporal spectra.
-%     \item Compare generated fields against DNS at multiple Reynolds numbers and compute higher-order structure functions.
-%     \item Potential use of generative models conditioned on Reynolds number or integral scales.
-%   \end{itemize}
-% \end{frame}
-
-
-
-% \begin{frame}[allowframebreaks]{References}
-% \printbibliography
-% \end{frame}
 
 \end{document}
