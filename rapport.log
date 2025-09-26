@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.11)  15 SEP 2025 09:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.11)  26 SEP 2025 13:49
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  %&-line parsing enabled.
 **rapport.tex
 (./rapport.tex
@@ -491,7 +491,7 @@ Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2023/07/08 v1.0d unified shell escape interface for LaTeX
-Package shellesc Info: Restricted shell escape enabled on input line 77.
+Package shellesc Info: Unrestricted shell escape enabled on input line 75.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/ifplatform/ifplatform.sty
 Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
@@ -505,9 +505,10 @@ Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
 Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 )
+runsystem(uname -s > "rapport.w18")...executed.
 
-Package ifplatform Warning: 
-    shell escape is disabled, so I can only detect \ifwindows.
+ (./rapport.w18)
+runsystem(rm -- "rapport.w18")...executed.
 
 ) (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
 (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
@@ -532,19 +533,9 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \@float@every@listing=\toks36
 \c@listing=\count343
 )
-runsystem(mkdir -p _minted-rapport)...disabled (restricted).
+runsystem(mkdir -p _minted-rapport)...executed.
 
 
-
-! Package minted Error: You must invoke LaTeX with the -shell-escape flag.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.19 \usepackage
-                {authblk}
-? 
 (/usr/share/texlive/texmf-dist/tex/latex/preprint/authblk.sty
 Package: authblk 2001/02/27 1.3 (PWD)
 \affilsep=\skip61
@@ -810,22 +801,13 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package color Info: Driver file: pdftex.def on input line 149.
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx))
-runsystem(command -v pygmentize && touch rapport.aex)...disabled (restricted).
+runsystem(command -v pygmentize && touch rapport.aex)...executed.
 
+runsystem(rm rapport.aex)...executed.
 
-
-! Package minted Error: You must have `pygmentize' installed to use this packag
-e.
-
-See the minted package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.33 \begin{document}
-                     
-? 
 \@quotelevel=\count477
 \@quotereset=\count478
+
 (./rapport.aux)
 \openout1 = `rapport.aux'.
 
@@ -948,12 +930,12 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 47.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<illustrations/minesparis.png, id=92, 413.1435pt x 161.403pt>
+<illustrations/minesparis.png, id=96, 413.1435pt x 161.403pt>
 File: illustrations/minesparis.png Graphic file (type png)
 <use illustrations/minesparis.png>
 Package pdftex.def Info: illustrations/minesparis.png  used on input line 56.
 (pdftex.def)             Requested size: 203.83417pt x 79.62997pt.
-<illustrations/logo_cemef.jpg, id=94, 126.7134pt x 59.2614pt>
+<illustrations/logo_cemef.jpg, id=98, 126.7134pt x 59.2614pt>
 File: illustrations/logo_cemef.jpg Graphic file (type jpg)
 <use illustrations/logo_cemef.jpg>
 Package pdftex.def Info: illustrations/logo_cemef.jpg  used on input line 61.
@@ -973,33 +955,33 @@ been already used, duplicate ignored
                    \relax 
 l.75 \newpage
               [1]
-<illustrations/TurbulenceExample.jpg, id=133, 501.875pt x 432.61626pt>
+<illustrations/TurbulenceExample.jpg, id=138, 501.875pt x 432.61626pt>
 File: illustrations/TurbulenceExample.jpg Graphic file (type jpg)
 <use illustrations/TurbulenceExample.jpg>
 Package pdftex.def Info: illustrations/TurbulenceExample.jpg  used on input lin
 e 85.
 (pdftex.def)             Requested size: 226.48395pt x 195.23001pt.
  [2 <./illustrations/TurbulenceExample.jpg>]
-<illustrations/Velocity_Example.png, id=152, 406.8801pt x 328.8285pt>
+<illustrations/Velocity_Example.png, id=157, 406.8801pt x 328.8285pt>
 File: illustrations/Velocity_Example.png Graphic file (type png)
 <use illustrations/Velocity_Example.png>
 Package pdftex.def Info: illustrations/Velocity_Example.png  used on input line
  126.
 (pdftex.def)             Requested size: 221.95676pt x 179.37607pt.
-<illustrations/Velocity_Example2.png, id=153, 406.8801pt x 328.8285pt>
+<illustrations/Velocity_Example2.png, id=158, 406.8801pt x 328.8285pt>
 File: illustrations/Velocity_Example2.png Graphic file (type png)
 <use illustrations/Velocity_Example2.png>
 Package pdftex.def Info: illustrations/Velocity_Example2.png  used on input lin
 e 131.
 (pdftex.def)             Requested size: 221.95676pt x 179.37607pt.
  [3]
-<illustrations/VelocityFieldVTU.png, id=169, 770.88pt x 578.16pt>
+<illustrations/VelocityFieldVTU.png, id=174, 770.88pt x 578.16pt>
 File: illustrations/VelocityFieldVTU.png Graphic file (type png)
 <use illustrations/VelocityFieldVTU.png>
 Package pdftex.def Info: illustrations/VelocityFieldVTU.png  used on input line
  138.
 (pdftex.def)             Requested size: 452.9679pt x 339.72638pt.
-<illustrations/WaveVectorGeometry.png, id=170, 476.78125pt x 483.8075pt>
+<illustrations/WaveVectorGeometry.png, id=175, 476.78125pt x 483.8075pt>
 File: illustrations/WaveVectorGeometry.png Graphic file (type png)
 <use illustrations/WaveVectorGeometry.png>
 Package pdftex.def Info: illustrations/WaveVectorGeometry.png  used on input li
@@ -1019,21 +1001,21 @@ Overfull \hbox (1.2689pt too wide) in paragraph at lines 167--171
 L/cmm/m/it/12 ^^T[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 e[]$\T1/cmr/m/n/12 . 
  []
 
-<illustrations/energy-spectrum-example.png, id=182, 853.1875pt x 618.31pt>
+<illustrations/energy-spectrum-example.png, id=187, 853.1875pt x 618.31pt>
 File: illustrations/energy-spectrum-example.png Graphic file (type png)
 <use illustrations/energy-spectrum-example.png>
 Package pdftex.def Info: illustrations/energy-spectrum-example.png  used on inp
 ut line 177.
 (pdftex.def)             Requested size: 317.07614pt x 229.79005pt.
 [5 <./illustrations/WaveVectorGeometry.png>]
-<illustrations/Energy_Spectrum_VKP.png, id=202, 462.528pt x 346.896pt>
+<illustrations/Energy_Spectrum_VKP.png, id=207, 462.528pt x 346.896pt>
 File: illustrations/Energy_Spectrum_VKP.png Graphic file (type png)
 <use illustrations/Energy_Spectrum_VKP.png>
 Package pdftex.def Info: illustrations/Energy_Spectrum_VKP.png  used on input l
 ine 205.
 (pdftex.def)             Requested size: 317.07614pt x 237.81816pt.
  [6 <./illustrations/energy-spectrum-example.png>]
-<illustrations/EnergySpectrumTrained.png, id=213, 422.0568pt x 331.7193pt>
+<illustrations/EnergySpectrumTrained.png, id=218, 422.0568pt x 331.7193pt>
 File: illustrations/EnergySpectrumTrained.png Graphic file (type png)
 <use illustrations/EnergySpectrumTrained.png>
 Package pdftex.def Info: illustrations/EnergySpectrumTrained.png  used on input
@@ -1050,13 +1032,13 @@ Overfull \hbox (20.40852pt too wide) in paragraph at lines 265--274
  [][] 
  []
 
-<illustrations/TransVelIncrExample.png, id=222, 445.665pt x 327.47343pt>
+<illustrations/TransVelIncrExample.png, id=227, 445.665pt x 327.47343pt>
 File: illustrations/TransVelIncrExample.png Graphic file (type png)
 <use illustrations/TransVelIncrExample.png>
 Package pdftex.def Info: illustrations/TransVelIncrExample.png  used on input l
 ine 284.
 (pdftex.def)             Requested size: 221.95676pt x 163.09172pt.
-<illustrations/LongVelIncrExample.png, id=223, 450.18187pt x 327.47343pt>
+<illustrations/LongVelIncrExample.png, id=228, 450.18187pt x 327.47343pt>
 File: illustrations/LongVelIncrExample.png Graphic file (type png)
 <use illustrations/LongVelIncrExample.png>
 Package pdftex.def Info: illustrations/LongVelIncrExample.png  used on input li
@@ -1068,13 +1050,13 @@ Overfull \hbox (1.48083pt too wide) in paragraph at lines 296--297
 e []6[]) and lim-ited anisotropy
  []
 
-<illustrations/TransVelIncrRe.png, id=227, 664.4825pt x 488.82625pt>
+<illustrations/TransVelIncrRe.png, id=232, 664.4825pt x 488.82625pt>
 File: illustrations/TransVelIncrRe.png Graphic file (type png)
 <use illustrations/TransVelIncrRe.png>
 Package pdftex.def Info: illustrations/TransVelIncrRe.png  used on input line 3
 03.
 (pdftex.def)             Requested size: 221.95676pt x 163.2823pt.
-<illustrations/LongVelIncrRe.png, id=230, 660.4675pt x 467.7475pt>
+<illustrations/LongVelIncrRe.png, id=235, 660.4675pt x 467.7475pt>
 File: illustrations/LongVelIncrRe.png Graphic file (type png)
 <use illustrations/LongVelIncrRe.png>
 Package pdftex.def Info: illustrations/LongVelIncrRe.png  used on input line 30
@@ -1092,33 +1074,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 375--376
 
  []
 
-<illustrations/StartGaussian.png, id=262, 895.09406pt x 293.59688pt>
+<illustrations/StartGaussian.png, id=267, 895.09406pt x 293.59688pt>
 File: illustrations/StartGaussian.png Graphic file (type png)
 <use illustrations/StartGaussian.png>
 Package pdftex.def Info: illustrations/StartGaussian.png  used on input line 38
 2.
 (pdftex.def)             Requested size: 452.9679pt x 148.58107pt.
-<illustrations/StartHeavyTail.png, id=263, 895.09406pt x 293.59688pt>
+<illustrations/StartHeavyTail.png, id=268, 895.09406pt x 293.59688pt>
 File: illustrations/StartHeavyTail.png Graphic file (type png)
 <use illustrations/StartHeavyTail.png>
 Package pdftex.def Info: illustrations/StartHeavyTail.png  used on input line 3
 90.
 (pdftex.def)             Requested size: 452.9679pt x 148.58107pt.
 [10 <./illustrations/StartGaussian.png>]
-<VelIncrPSIKAPPASIGMA/VelIncrLong.png, id=280, 432.1746pt x 314.3745pt>
+<VelIncrPSIKAPPASIGMA/VelIncrLong.png, id=285, 432.1746pt x 314.3745pt>
 File: VelIncrPSIKAPPASIGMA/VelIncrLong.png Graphic file (type png)
 <use VelIncrPSIKAPPASIGMA/VelIncrLong.png>
 Package pdftex.def Info: VelIncrPSIKAPPASIGMA/VelIncrLong.png  used on input li
 ne 415.
 (pdftex.def)             Requested size: 217.42265pt x 158.15584pt.
-<VelIncrPSIKAPPASIGMA/VelIncrTrans.png, id=281, 427.8384pt x 314.3745pt>
+<VelIncrPSIKAPPASIGMA/VelIncrTrans.png, id=286, 427.8384pt x 314.3745pt>
 File: VelIncrPSIKAPPASIGMA/VelIncrTrans.png Graphic file (type png)
 <use VelIncrPSIKAPPASIGMA/VelIncrTrans.png>
 Package pdftex.def Info: VelIncrPSIKAPPASIGMA/VelIncrTrans.png  used on input l
 ine 419.
 (pdftex.def)             Requested size: 217.42265pt x 159.76282pt.
  [11 <./illustrations/StartHeavyTail.png>]
-<VelIncrPSIKAPPASIGMA/EnergySpectrum.png, id=288, 433.62pt x 342.5297pt>
+<VelIncrPSIKAPPASIGMA/EnergySpectrum.png, id=293, 433.62pt x 342.5297pt>
 File: VelIncrPSIKAPPASIGMA/EnergySpectrum.png Graphic file (type png)
 <use VelIncrPSIKAPPASIGMA/EnergySpectrum.png>
 Package pdftex.def Info: VelIncrPSIKAPPASIGMA/EnergySpectrum.png  used on input
@@ -1129,7 +1111,7 @@ Underfull \hbox (badness 1668) in paragraph at lines 431--431
 []\T1/cmr/m/n/12 Figure 14: |En-ergy spec-trum with the
  []
 
-<VelIncrPSIKAPPASIGMA/EnergySpectrumLog.png, id=289, 435.12563pt x 345.54094pt>
+<VelIncrPSIKAPPASIGMA/EnergySpectrumLog.png, id=294, 435.12563pt x 345.54094pt>
 
 File: VelIncrPSIKAPPASIGMA/EnergySpectrumLog.png Graphic file (type png)
 <use VelIncrPSIKAPPASIGMA/EnergySpectrumLog.png>
@@ -1149,13 +1131,13 @@ Overfull \hbox (20.40852pt too wide) in paragraph at lines 460--469
 Excluding 'comment' comment. [12 <./VelIncrPSIKAPPASIGMA/VelIncrLong.png> <./Ve
 lIncrPSIKAPPASIGMA/VelIncrTrans.png> <./VelIncrPSIKAPPASIGMA/EnergySpectrum.png
 > <./VelIncrPSIKAPPASIGMA/EnergySpectrumLog.png>]
-<illustrations/LongVelIncrAngles.png, id=308, 462.528pt x 346.896pt>
+<illustrations/LongVelIncrAngles.png, id=313, 462.528pt x 346.896pt>
 File: illustrations/LongVelIncrAngles.png Graphic file (type png)
 <use illustrations/LongVelIncrAngles.png>
 Package pdftex.def Info: illustrations/LongVelIncrAngles.png  used on input lin
 e 517.
 (pdftex.def)             Requested size: 221.95676pt x 166.47113pt.
-<illustrations/TransVelIncrAngles.png, id=309, 424.9476pt x 312.9291pt>
+<illustrations/TransVelIncrAngles.png, id=314, 424.9476pt x 312.9291pt>
 File: illustrations/TransVelIncrAngles.png Graphic file (type png)
 <use illustrations/TransVelIncrAngles.png>
 Package pdftex.def Info: illustrations/TransVelIncrAngles.png  used on input li
@@ -1174,7 +1156,7 @@ Overfull \hbox (20.40852pt too wide) in paragraph at lines 557--566
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<illustrations/AnglesDistributionLearned.png, id=312, 859.2903pt x 281.853pt>
+<illustrations/AnglesDistributionLearned.png, id=317, 859.2903pt x 281.853pt>
 File: illustrations/AnglesDistributionLearned.png Graphic file (type png)
 <use illustrations/AnglesDistributionLearned.png>
 Package pdftex.def Info: illustrations/AnglesDistributionLearned.png  used on i
@@ -1193,212 +1175,212 @@ LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 ))
-Overfull \hbox (4.69632pt too wide) in paragraph at lines 660--671
+Overfull \hbox (4.69632pt too wide) in paragraph at lines 661--672
  [][] 
  []
 
 [16{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-<VariableSelection/alpha.png, id=343, 216.81pt x 216.81pt>
+<VariableSelection/alpha.png, id=348, 216.81pt x 216.81pt>
 File: VariableSelection/alpha.png Graphic file (type png)
 <use VariableSelection/alpha.png>
-Package pdftex.def Info: VariableSelection/alpha.png  used on input line 698.
+Package pdftex.def Info: VariableSelection/alpha.png  used on input line 699.
 (pdftex.def)             Requested size: 158.54787pt x 158.54152pt.
-<VariableSelection/theta.png, id=344, 216.81pt x 216.81pt>
+<VariableSelection/theta.png, id=349, 216.81pt x 216.81pt>
 File: VariableSelection/theta.png Graphic file (type png)
 <use VariableSelection/theta.png>
-Package pdftex.def Info: VariableSelection/theta.png  used on input line 704.
+Package pdftex.def Info: VariableSelection/theta.png  used on input line 705.
 (pdftex.def)             Requested size: 158.54787pt x 158.54152pt.
-<VariableSelection/theta_alpha.png, id=345, 433.62pt x 216.81pt>
+<VariableSelection/theta_alpha.png, id=350, 433.62pt x 216.81pt>
 File: VariableSelection/theta_alpha.png Graphic file (type png)
 <use VariableSelection/theta_alpha.png>
 Package pdftex.def Info: VariableSelection/theta_alpha.png  used on input line 
-710.
+711.
 (pdftex.def)             Requested size: 317.09575pt x 158.54152pt.
-<VariableSelection/phi.png, id=346, 216.81pt x 216.81pt>
+<VariableSelection/phi.png, id=351, 216.81pt x 216.81pt>
 File: VariableSelection/phi.png Graphic file (type png)
 <use VariableSelection/phi.png>
-Package pdftex.def Info: VariableSelection/phi.png  used on input line 716.
+Package pdftex.def Info: VariableSelection/phi.png  used on input line 717.
 (pdftex.def)             Requested size: 158.54787pt x 158.54152pt.
  [17 <./VariableSelection/alpha.png> <./VariableSelection/theta.png>]
-<VariableSelection/phi_alpha.png, id=357, 433.62pt x 216.81pt>
+<VariableSelection/phi_alpha.png, id=362, 433.62pt x 216.81pt>
 File: VariableSelection/phi_alpha.png Graphic file (type png)
 <use VariableSelection/phi_alpha.png>
 Package pdftex.def Info: VariableSelection/phi_alpha.png  used on input line 72
-2.
+3.
 (pdftex.def)             Requested size: 317.09575pt x 158.54152pt.
-<VariableSelection/phi_theta.png, id=358, 433.62pt x 216.81pt>
+<VariableSelection/phi_theta.png, id=363, 433.62pt x 216.81pt>
 File: VariableSelection/phi_theta.png Graphic file (type png)
 <use VariableSelection/phi_theta.png>
 Package pdftex.def Info: VariableSelection/phi_theta.png  used on input line 72
-8.
+9.
 (pdftex.def)             Requested size: 317.09575pt x 158.54152pt.
-<VariableSelection/phi_theta_alpha.png, id=359, 650.43pt x 216.81pt>
+<VariableSelection/phi_theta_alpha.png, id=364, 650.43pt x 216.81pt>
 File: VariableSelection/phi_theta_alpha.png Graphic file (type png)
 <use VariableSelection/phi_theta_alpha.png>
 Package pdftex.def Info: VariableSelection/phi_theta_alpha.png  used on input l
-ine 734.
+ine 735.
 (pdftex.def)             Requested size: 475.64363pt x 158.54152pt.
 
-Overfull \hbox (22.67574pt too wide) in paragraph at lines 734--736
+Overfull \hbox (22.67574pt too wide) in paragraph at lines 735--737
  [][] 
  []
 
 [18 <./VariableSelection/theta_alpha.png> <./VariableSelection/phi.png> <./Vari
 ableSelection/phi_alpha.png>]
-<VariableSelection/joint_phi_alpha.png, id=371, 433.62pt x 361.35pt>
+<VariableSelection/joint_phi_alpha.png, id=376, 433.62pt x 361.35pt>
 File: VariableSelection/joint_phi_alpha.png Graphic file (type png)
 <use VariableSelection/joint_phi_alpha.png>
 Package pdftex.def Info: VariableSelection/joint_phi_alpha.png  used on input l
-ine 749.
+ine 750.
 (pdftex.def)             Requested size: 203.83417pt x 169.86209pt.
-<VariableSelection/joint_phi_theta.png, id=372, 433.62pt x 361.35pt>
+<VariableSelection/joint_phi_theta.png, id=377, 433.62pt x 361.35pt>
 File: VariableSelection/joint_phi_theta.png Graphic file (type png)
 <use VariableSelection/joint_phi_theta.png>
 Package pdftex.def Info: VariableSelection/joint_phi_theta.png  used on input l
-ine 756.
+ine 757.
 (pdftex.def)             Requested size: 203.83417pt x 169.86209pt.
-<VariableSelection/joint_theta_alpha.png, id=373, 433.62pt x 361.35pt>
+<VariableSelection/joint_theta_alpha.png, id=378, 433.62pt x 361.35pt>
 File: VariableSelection/joint_theta_alpha.png Graphic file (type png)
 <use VariableSelection/joint_theta_alpha.png>
 Package pdftex.def Info: VariableSelection/joint_theta_alpha.png  used on input
- line 765.
+ line 766.
 (pdftex.def)             Requested size: 203.83417pt x 169.86209pt.
-<VariableSelection/joint3D.png, id=374, 1844.8925pt x 950.55125pt>
+<VariableSelection/joint3D.png, id=379, 1844.8925pt x 950.55125pt>
 File: VariableSelection/joint3D.png Graphic file (type png)
 <use VariableSelection/joint3D.png>
-Package pdftex.def Info: VariableSelection/joint3D.png  used on input line 772.
+Package pdftex.def Info: VariableSelection/joint3D.png  used on input line 773.
 
 (pdftex.def)             Requested size: 203.83417pt x 105.01059pt.
  [19 <./VariableSelection/phi_theta.png> <./VariableSelection/phi_theta_alpha.p
 ng>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 781.
+(hyperref)                removing `math shift' on input line 782.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\psi' on input line 781.
+(hyperref)                removing `\psi' on input line 782.
 
 
-Overfull \hbox (4.69632pt too wide) in paragraph at lines 795--806
+Overfull \hbox (4.69632pt too wide) in paragraph at lines 796--807
  [][] 
  []
 
-<VariableSelectionPsi/alpha_psi.png, id=383, 578.16pt x 289.08pt>
+<VariableSelectionPsi/alpha_psi.png, id=388, 578.16pt x 289.08pt>
 File: VariableSelectionPsi/alpha_psi.png Graphic file (type png)
 <use VariableSelectionPsi/alpha_psi.png>
 Package pdftex.def Info: VariableSelectionPsi/alpha_psi.png  used on input line
- 828.
+ 829.
 (pdftex.def)             Requested size: 317.0803pt x 158.54152pt.
-<VariableSelectionPsi/phi_alpha_psi.png, id=384, 867.24pt x 289.08pt>
+<VariableSelectionPsi/phi_alpha_psi.png, id=389, 867.24pt x 289.08pt>
 File: VariableSelectionPsi/phi_alpha_psi.png Graphic file (type png)
 <use VariableSelectionPsi/phi_alpha_psi.png>
 Package pdftex.def Info: VariableSelectionPsi/phi_alpha_psi.png  used on input 
-line 834.
+line 835.
 (pdftex.def)             Requested size: 475.62048pt x 158.54152pt.
 
-Overfull \hbox (22.65259pt too wide) in paragraph at lines 834--835
+Overfull \hbox (22.65259pt too wide) in paragraph at lines 835--836
  [][] 
  []
 
 [20 <./VariableSelection/joint_phi_alpha.png> <./VariableSelection/joint_phi_th
 eta.png> <./VariableSelection/joint_theta_alpha.png> <./VariableSelection/joint
 3D.png>]
-<VariableSelectionPsi/phi_psi.png, id=397, 578.16pt x 289.08pt>
+<VariableSelectionPsi/phi_psi.png, id=402, 578.16pt x 289.08pt>
 File: VariableSelectionPsi/phi_psi.png Graphic file (type png)
 <use VariableSelectionPsi/phi_psi.png>
 Package pdftex.def Info: VariableSelectionPsi/phi_psi.png  used on input line 8
-40.
+41.
 (pdftex.def)             Requested size: 317.0803pt x 158.54152pt.
-<VariableSelectionPsi/theta_psi.png, id=398, 578.16pt x 289.08pt>
+<VariableSelectionPsi/theta_psi.png, id=403, 578.16pt x 289.08pt>
 File: VariableSelectionPsi/theta_psi.png Graphic file (type png)
 <use VariableSelectionPsi/theta_psi.png>
 Package pdftex.def Info: VariableSelectionPsi/theta_psi.png  used on input line
- 846.
+ 847.
 (pdftex.def)             Requested size: 317.0803pt x 158.54152pt.
-<VariableSelectionPsi/theta_alpha_psi.png, id=399, 867.24pt x 289.08pt>
+<VariableSelectionPsi/theta_alpha_psi.png, id=404, 867.24pt x 289.08pt>
 File: VariableSelectionPsi/theta_alpha_psi.png Graphic file (type png)
 <use VariableSelectionPsi/theta_alpha_psi.png>
 Package pdftex.def Info: VariableSelectionPsi/theta_alpha_psi.png  used on inpu
-t line 852.
+t line 853.
 (pdftex.def)             Requested size: 475.62048pt x 158.54152pt.
 
-Overfull \hbox (22.65259pt too wide) in paragraph at lines 852--853
+Overfull \hbox (22.65259pt too wide) in paragraph at lines 853--854
  [][] 
  []
 
 [21 <./VariableSelectionPsi/alpha_psi.png> <./VariableSelectionPsi/phi_alpha_ps
 i.png> <./VariableSelectionPsi/phi_psi.png>]
-<VariableSelectionPsi/phi_theta_psi.png, id=410, 867.24pt x 289.08pt>
+<VariableSelectionPsi/phi_theta_psi.png, id=415, 867.24pt x 289.08pt>
 File: VariableSelectionPsi/phi_theta_psi.png Graphic file (type png)
 <use VariableSelectionPsi/phi_theta_psi.png>
 Package pdftex.def Info: VariableSelectionPsi/phi_theta_psi.png  used on input 
-line 858.
+line 859.
 (pdftex.def)             Requested size: 475.62048pt x 158.54152pt.
 
-Overfull \hbox (22.65259pt too wide) in paragraph at lines 858--859
+Overfull \hbox (22.65259pt too wide) in paragraph at lines 859--860
  [][] 
  []
 
-<VariableSelectionPsi/phi_theta_alpha_psi.png, id=411, 1156.32pt x 289.08pt>
+<VariableSelectionPsi/phi_theta_alpha_psi.png, id=416, 1156.32pt x 289.08pt>
 File: VariableSelectionPsi/phi_theta_alpha_psi.png Graphic file (type png)
 <use VariableSelectionPsi/phi_theta_alpha_psi.png>
 Package pdftex.def Info: VariableSelectionPsi/phi_theta_alpha_psi.png  used on 
-input line 864.
+input line 865.
 (pdftex.def)             Requested size: 452.9679pt x 113.23918pt.
 [22 <./VariableSelectionPsi/theta_psi.png> <./VariableSelectionPsi/theta_alpha_
 psi.png> <./VariableSelectionPsi/phi_theta_psi.png>]
-<VariableSelectionPsi/joint_alpha_psi.png, id=422, 433.62pt x 433.62pt>
+<VariableSelectionPsi/joint_alpha_psi.png, id=427, 433.62pt x 433.62pt>
 File: VariableSelectionPsi/joint_alpha_psi.png Graphic file (type png)
 <use VariableSelectionPsi/joint_alpha_psi.png>
 Package pdftex.def Info: VariableSelectionPsi/joint_alpha_psi.png  used on inpu
-t line 879.
+t line 880.
 (pdftex.def)             Requested size: 203.83417pt x 203.8345pt.
-<VariableSelectionPsi/joint_phi_psi.png, id=423, 433.62pt x 433.62pt>
+<VariableSelectionPsi/joint_phi_psi.png, id=428, 433.62pt x 433.62pt>
 File: VariableSelectionPsi/joint_phi_psi.png Graphic file (type png)
 <use VariableSelectionPsi/joint_phi_psi.png>
 Package pdftex.def Info: VariableSelectionPsi/joint_phi_psi.png  used on input 
-line 886.
+line 887.
 (pdftex.def)             Requested size: 203.83417pt x 203.8345pt.
-<VariableSelectionPsi/joint_theta_psi.png, id=424, 433.62pt x 433.62pt>
+<VariableSelectionPsi/joint_theta_psi.png, id=429, 433.62pt x 433.62pt>
 File: VariableSelectionPsi/joint_theta_psi.png Graphic file (type png)
 <use VariableSelectionPsi/joint_theta_psi.png>
 Package pdftex.def Info: VariableSelectionPsi/joint_theta_psi.png  used on inpu
-t line 895.
+t line 896.
 (pdftex.def)             Requested size: 203.83417pt x 203.8345pt.
-<VariableSelectionPsi/joint3d_phi_alpha_psi.png, id=425, 485.815pt x 636.3775pt
+<VariableSelectionPsi/joint3d_phi_alpha_psi.png, id=430, 485.815pt x 636.3775pt
 >
 File: VariableSelectionPsi/joint3d_phi_alpha_psi.png Graphic file (type png)
 <use VariableSelectionPsi/joint3d_phi_alpha_psi.png>
 Package pdftex.def Info: VariableSelectionPsi/joint3d_phi_alpha_psi.png  used o
-n input line 902.
+n input line 903.
 (pdftex.def)             Requested size: 135.89174pt x 177.99998pt.
 
-Underfull \hbox (badness 6559) in paragraph at lines 903--903
+Underfull \hbox (badness 6559) in paragraph at lines 904--904
 []\T1/cmr/m/n/10.95 (d) |Joint dis-tri-bu-tion of
  []
 
-<VariableSelectionPsi/joint3d_phi_theta_psi.png, id=426, 485.815pt x 636.3775pt
+<VariableSelectionPsi/joint3d_phi_theta_psi.png, id=431, 485.815pt x 636.3775pt
 >
 File: VariableSelectionPsi/joint3d_phi_theta_psi.png Graphic file (type png)
 <use VariableSelectionPsi/joint3d_phi_theta_psi.png>
 Package pdftex.def Info: VariableSelectionPsi/joint3d_phi_theta_psi.png  used o
-n input line 909.
+n input line 910.
 (pdftex.def)             Requested size: 135.89174pt x 177.99998pt.
 
-Underfull \hbox (badness 7704) in paragraph at lines 910--910
+Underfull \hbox (badness 7704) in paragraph at lines 911--911
 []\T1/cmr/m/n/10.95 (e) |Joint dis-tri-bu-tion of
  []
 
-<VariableSelectionPsi/joint3d_theta_alpha_psi.png, id=427, 485.815pt x 636.3775
+<VariableSelectionPsi/joint3d_theta_alpha_psi.png, id=432, 485.815pt x 636.3775
 pt>
 File: VariableSelectionPsi/joint3d_theta_alpha_psi.png Graphic file (type png)
 <use VariableSelectionPsi/joint3d_theta_alpha_psi.png>
 Package pdftex.def Info: VariableSelectionPsi/joint3d_theta_alpha_psi.png  used
- on input line 916.
+ on input line 917.
 (pdftex.def)             Requested size: 135.89174pt x 177.99998pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 917--917
+Underfull \hbox (badness 10000) in paragraph at lines 918--918
 []\T1/cmr/m/n/10.95 (f) |Joint dis-tri-bu-tion of
  []
 
@@ -1411,26 +1393,19 @@ png> <./VariableSelectionPsi/joint3d_phi_theta_psi.png> <./VariableSelectionPsi
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `rapport.out' has not changed.
-(rerunfilecheck)             Checksum: 4BEFD4BE9180F424573C1CD6F53881AE;3012.
-runsystem(rm rapport.pyg)...disabled (restricted).
-
-
-Package biblatex Warning: Please rerun LaTeX.
+(rerunfilecheck)             Checksum: 4FD326CCC7C0DB752781D23375D27079;3130.
+runsystem(rm rapport.pyg)...executed.
 
 Package logreq Info: Writing requests to 'rapport.run.xml'.
 \openout1 = `rapport.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26924 strings out of 474222
- 542370 string characters out of 5748733
+ 26933 strings out of 474222
+ 542520 string characters out of 5748733
  1938975 words of memory out of 5000000
- 48741 multiletter control sequences out of 15000+600000
+ 48746 multiletter control sequences out of 15000+600000
  577448 words of font info for 89 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  77i,12n,82p,1344b,1570s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1455,10 +1430,10 @@ blic/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm12
 00.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/t
 exmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/pub
 lic/cm-super/sftt1200.pfb>
-Output written on rapport.pdf (26 pages, 2390089 bytes).
+Output written on rapport.pdf (26 pages, 2390347 bytes).
 PDF statistics:
- 605 PDF objects out of 1000 (max. 8388607)
- 435 compressed objects within 5 object streams
- 121 named destinations out of 1000 (max. 500000)
- 412 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 610 PDF objects out of 1000 (max. 8388607)
+ 440 compressed objects within 5 object streams
+ 122 named destinations out of 1000 (max. 500000)
+ 420 words of extra memory for PDF output out of 10000 (max. 10000000)
 

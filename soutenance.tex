@@ -10,7 +10,7 @@
 \usepackage[natbib=true,style=authoryear,backend=bibtex,useprefix=true]{biblatex}
 \addbibresource{/home/admin-sbraik/Documents/InternshipReport/references.bib}
 \usepackage{comment}
-% \usepackage[hidelinks]{hyperref}
+\usepackage[hidelinks]{hyperref}
 
 % Title
 \title[Synthetic turbulent field]{Synthetic turbulence generation using
@@ -25,7 +25,6 @@ statistical methods}
 
 \begin{frame}
   \titlepage
-  % \includegraphics[options]{illustrations/M}
 \end{frame}
 
 \begin{frame}{Outline}
@@ -242,18 +241,7 @@ statistical methods}
   \end{figure}
 \end{frame}
 
-\begin{comment}
-\begin{frame}{Preliminary experiments}
-  \begin{figure}
-    \centering
-    \includegraphics[width=0.9\textwidth]{illustrations/StartHeavyTail.png}
-    \caption{Angle distributions starting from heavy-tailed increments}
-  \end{figure}
-  \begin{itemize}
-    \item Observations: RMS and means largely preserved while increment statistics change.
-  \end{itemize}
-\end{frame}
-\end{comment}
+
 \subsection{First approach}
 \begin{frame}{First approach}
   \begin{itemize}
@@ -398,11 +386,6 @@ statistical methods}
   \end{table}
 \end{frame}
 
-
-% \begin{frame}{Robustness of the learned angles}
-
-% \end{frame}
-
 \section{Conclusion}
 
 \begin{frame}{Conclusion}
@@ -417,26 +400,6 @@ statistical methods}
     \item Change the turbulence hypothesis.
   \end{itemize}
 \end{frame}
-
-% \section{Conclusion \& Future Work}
-% \begin{frame}{Conclusion}
-%   \begin{itemize}
-%     \item Random Fourier is a flexible and interpretable model for synthetic HIT.
-%     \item Optimising coefficients can introduce realistic intermittency (heavy tails) while preserving primary statistics.
-%     \item Regularisation and composite losses are crucial to maintain spectral fidelity and isotropy.
-%   \end{itemize}
-% \end{frame}
-
-% \begin{frame}{Future work}
-%   \begin{itemize}
-%     %\item Explore richer parameterization (e.g. correlated phases, amplitude stochasticity).
-%     \item Incorporate time dependence (non-frozen turbulence) and match temporal spectra.
-%     \item Compare generated fields against DNS at multiple Reynolds numbers and compute higher-order structure functions.
-%     \item Potential use of generative models conditioned on Reynolds number or integral scales.
-%   \end{itemize}
-% \end{frame}
-
-
 
 % \begin{frame}[allowframebreaks]{References}
 % \printbibliography
