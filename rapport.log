@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.11)  26 SEP 2025 13:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.11)  29 SEP 2025 15:02
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1175,212 +1175,212 @@ LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 ))
-Overfull \hbox (4.69632pt too wide) in paragraph at lines 661--672
+Overfull \hbox (4.69632pt too wide) in paragraph at lines 660--671
  [][] 
  []
 
 [16{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-<VariableSelection/alpha.png, id=348, 216.81pt x 216.81pt>
+<VariableSelection/alpha.png, id=346, 216.81pt x 216.81pt>
 File: VariableSelection/alpha.png Graphic file (type png)
 <use VariableSelection/alpha.png>
-Package pdftex.def Info: VariableSelection/alpha.png  used on input line 699.
+Package pdftex.def Info: VariableSelection/alpha.png  used on input line 698.
 (pdftex.def)             Requested size: 158.54787pt x 158.54152pt.
-<VariableSelection/theta.png, id=349, 216.81pt x 216.81pt>
+<VariableSelection/theta.png, id=347, 216.81pt x 216.81pt>
 File: VariableSelection/theta.png Graphic file (type png)
 <use VariableSelection/theta.png>
-Package pdftex.def Info: VariableSelection/theta.png  used on input line 705.
+Package pdftex.def Info: VariableSelection/theta.png  used on input line 704.
 (pdftex.def)             Requested size: 158.54787pt x 158.54152pt.
-<VariableSelection/theta_alpha.png, id=350, 433.62pt x 216.81pt>
+<VariableSelection/theta_alpha.png, id=348, 433.62pt x 216.81pt>
 File: VariableSelection/theta_alpha.png Graphic file (type png)
 <use VariableSelection/theta_alpha.png>
 Package pdftex.def Info: VariableSelection/theta_alpha.png  used on input line 
-711.
+710.
 (pdftex.def)             Requested size: 317.09575pt x 158.54152pt.
-<VariableSelection/phi.png, id=351, 216.81pt x 216.81pt>
+<VariableSelection/phi.png, id=349, 216.81pt x 216.81pt>
 File: VariableSelection/phi.png Graphic file (type png)
 <use VariableSelection/phi.png>
-Package pdftex.def Info: VariableSelection/phi.png  used on input line 717.
+Package pdftex.def Info: VariableSelection/phi.png  used on input line 716.
 (pdftex.def)             Requested size: 158.54787pt x 158.54152pt.
  [17 <./VariableSelection/alpha.png> <./VariableSelection/theta.png>]
-<VariableSelection/phi_alpha.png, id=362, 433.62pt x 216.81pt>
+<VariableSelection/phi_alpha.png, id=360, 433.62pt x 216.81pt>
 File: VariableSelection/phi_alpha.png Graphic file (type png)
 <use VariableSelection/phi_alpha.png>
 Package pdftex.def Info: VariableSelection/phi_alpha.png  used on input line 72
-3.
+2.
 (pdftex.def)             Requested size: 317.09575pt x 158.54152pt.
-<VariableSelection/phi_theta.png, id=363, 433.62pt x 216.81pt>
+<VariableSelection/phi_theta.png, id=361, 433.62pt x 216.81pt>
 File: VariableSelection/phi_theta.png Graphic file (type png)
 <use VariableSelection/phi_theta.png>
 Package pdftex.def Info: VariableSelection/phi_theta.png  used on input line 72
-9.
+8.
 (pdftex.def)             Requested size: 317.09575pt x 158.54152pt.
-<VariableSelection/phi_theta_alpha.png, id=364, 650.43pt x 216.81pt>
+<VariableSelection/phi_theta_alpha.png, id=362, 650.43pt x 216.81pt>
 File: VariableSelection/phi_theta_alpha.png Graphic file (type png)
 <use VariableSelection/phi_theta_alpha.png>
 Package pdftex.def Info: VariableSelection/phi_theta_alpha.png  used on input l
-ine 735.
+ine 734.
 (pdftex.def)             Requested size: 475.64363pt x 158.54152pt.
 
-Overfull \hbox (22.67574pt too wide) in paragraph at lines 735--737
+Overfull \hbox (22.67574pt too wide) in paragraph at lines 734--736
  [][] 
  []
 
 [18 <./VariableSelection/theta_alpha.png> <./VariableSelection/phi.png> <./Vari
 ableSelection/phi_alpha.png>]
-<VariableSelection/joint_phi_alpha.png, id=376, 433.62pt x 361.35pt>
+<VariableSelection/joint_phi_alpha.png, id=374, 433.62pt x 361.35pt>
 File: VariableSelection/joint_phi_alpha.png Graphic file (type png)
 <use VariableSelection/joint_phi_alpha.png>
 Package pdftex.def Info: VariableSelection/joint_phi_alpha.png  used on input l
-ine 750.
+ine 749.
 (pdftex.def)             Requested size: 203.83417pt x 169.86209pt.
-<VariableSelection/joint_phi_theta.png, id=377, 433.62pt x 361.35pt>
+<VariableSelection/joint_phi_theta.png, id=375, 433.62pt x 361.35pt>
 File: VariableSelection/joint_phi_theta.png Graphic file (type png)
 <use VariableSelection/joint_phi_theta.png>
 Package pdftex.def Info: VariableSelection/joint_phi_theta.png  used on input l
-ine 757.
+ine 756.
 (pdftex.def)             Requested size: 203.83417pt x 169.86209pt.
-<VariableSelection/joint_theta_alpha.png, id=378, 433.62pt x 361.35pt>
+<VariableSelection/joint_theta_alpha.png, id=376, 433.62pt x 361.35pt>
 File: VariableSelection/joint_theta_alpha.png Graphic file (type png)
 <use VariableSelection/joint_theta_alpha.png>
 Package pdftex.def Info: VariableSelection/joint_theta_alpha.png  used on input
- line 766.
+ line 765.
 (pdftex.def)             Requested size: 203.83417pt x 169.86209pt.
-<VariableSelection/joint3D.png, id=379, 1844.8925pt x 950.55125pt>
+<VariableSelection/joint3D.png, id=377, 1844.8925pt x 950.55125pt>
 File: VariableSelection/joint3D.png Graphic file (type png)
 <use VariableSelection/joint3D.png>
-Package pdftex.def Info: VariableSelection/joint3D.png  used on input line 773.
+Package pdftex.def Info: VariableSelection/joint3D.png  used on input line 772.
 
 (pdftex.def)             Requested size: 203.83417pt x 105.01059pt.
  [19 <./VariableSelection/phi_theta.png> <./VariableSelection/phi_theta_alpha.p
 ng>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 782.
+(hyperref)                removing `math shift' on input line 781.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\psi' on input line 782.
+(hyperref)                removing `\psi' on input line 781.
 
 
-Overfull \hbox (4.69632pt too wide) in paragraph at lines 796--807
+Overfull \hbox (4.69632pt too wide) in paragraph at lines 795--806
  [][] 
  []
 
-<VariableSelectionPsi/alpha_psi.png, id=388, 578.16pt x 289.08pt>
+<VariableSelectionPsi/alpha_psi.png, id=386, 578.16pt x 289.08pt>
 File: VariableSelectionPsi/alpha_psi.png Graphic file (type png)
 <use VariableSelectionPsi/alpha_psi.png>
 Package pdftex.def Info: VariableSelectionPsi/alpha_psi.png  used on input line
- 829.
+ 828.
 (pdftex.def)             Requested size: 317.0803pt x 158.54152pt.
-<VariableSelectionPsi/phi_alpha_psi.png, id=389, 867.24pt x 289.08pt>
+<VariableSelectionPsi/phi_alpha_psi.png, id=387, 867.24pt x 289.08pt>
 File: VariableSelectionPsi/phi_alpha_psi.png Graphic file (type png)
 <use VariableSelectionPsi/phi_alpha_psi.png>
 Package pdftex.def Info: VariableSelectionPsi/phi_alpha_psi.png  used on input 
-line 835.
+line 834.
 (pdftex.def)             Requested size: 475.62048pt x 158.54152pt.
 
-Overfull \hbox (22.65259pt too wide) in paragraph at lines 835--836
+Overfull \hbox (22.65259pt too wide) in paragraph at lines 834--835
  [][] 
  []
 
 [20 <./VariableSelection/joint_phi_alpha.png> <./VariableSelection/joint_phi_th
 eta.png> <./VariableSelection/joint_theta_alpha.png> <./VariableSelection/joint
 3D.png>]
-<VariableSelectionPsi/phi_psi.png, id=402, 578.16pt x 289.08pt>
+<VariableSelectionPsi/phi_psi.png, id=400, 578.16pt x 289.08pt>
 File: VariableSelectionPsi/phi_psi.png Graphic file (type png)
 <use VariableSelectionPsi/phi_psi.png>
 Package pdftex.def Info: VariableSelectionPsi/phi_psi.png  used on input line 8
-41.
+40.
 (pdftex.def)             Requested size: 317.0803pt x 158.54152pt.
-<VariableSelectionPsi/theta_psi.png, id=403, 578.16pt x 289.08pt>
+<VariableSelectionPsi/theta_psi.png, id=401, 578.16pt x 289.08pt>
 File: VariableSelectionPsi/theta_psi.png Graphic file (type png)
 <use VariableSelectionPsi/theta_psi.png>
 Package pdftex.def Info: VariableSelectionPsi/theta_psi.png  used on input line
- 847.
+ 846.
 (pdftex.def)             Requested size: 317.0803pt x 158.54152pt.
-<VariableSelectionPsi/theta_alpha_psi.png, id=404, 867.24pt x 289.08pt>
+<VariableSelectionPsi/theta_alpha_psi.png, id=402, 867.24pt x 289.08pt>
 File: VariableSelectionPsi/theta_alpha_psi.png Graphic file (type png)
 <use VariableSelectionPsi/theta_alpha_psi.png>
 Package pdftex.def Info: VariableSelectionPsi/theta_alpha_psi.png  used on inpu
-t line 853.
+t line 852.
 (pdftex.def)             Requested size: 475.62048pt x 158.54152pt.
 
-Overfull \hbox (22.65259pt too wide) in paragraph at lines 853--854
+Overfull \hbox (22.65259pt too wide) in paragraph at lines 852--853
  [][] 
  []
 
 [21 <./VariableSelectionPsi/alpha_psi.png> <./VariableSelectionPsi/phi_alpha_ps
 i.png> <./VariableSelectionPsi/phi_psi.png>]
-<VariableSelectionPsi/phi_theta_psi.png, id=415, 867.24pt x 289.08pt>
+<VariableSelectionPsi/phi_theta_psi.png, id=413, 867.24pt x 289.08pt>
 File: VariableSelectionPsi/phi_theta_psi.png Graphic file (type png)
 <use VariableSelectionPsi/phi_theta_psi.png>
 Package pdftex.def Info: VariableSelectionPsi/phi_theta_psi.png  used on input 
-line 859.
+line 858.
 (pdftex.def)             Requested size: 475.62048pt x 158.54152pt.
 
-Overfull \hbox (22.65259pt too wide) in paragraph at lines 859--860
+Overfull \hbox (22.65259pt too wide) in paragraph at lines 858--859
  [][] 
  []
 
-<VariableSelectionPsi/phi_theta_alpha_psi.png, id=416, 1156.32pt x 289.08pt>
+<VariableSelectionPsi/phi_theta_alpha_psi.png, id=414, 1156.32pt x 289.08pt>
 File: VariableSelectionPsi/phi_theta_alpha_psi.png Graphic file (type png)
 <use VariableSelectionPsi/phi_theta_alpha_psi.png>
 Package pdftex.def Info: VariableSelectionPsi/phi_theta_alpha_psi.png  used on 
-input line 865.
+input line 864.
 (pdftex.def)             Requested size: 452.9679pt x 113.23918pt.
 [22 <./VariableSelectionPsi/theta_psi.png> <./VariableSelectionPsi/theta_alpha_
 psi.png> <./VariableSelectionPsi/phi_theta_psi.png>]
-<VariableSelectionPsi/joint_alpha_psi.png, id=427, 433.62pt x 433.62pt>
+<VariableSelectionPsi/joint_alpha_psi.png, id=425, 433.62pt x 433.62pt>
 File: VariableSelectionPsi/joint_alpha_psi.png Graphic file (type png)
 <use VariableSelectionPsi/joint_alpha_psi.png>
 Package pdftex.def Info: VariableSelectionPsi/joint_alpha_psi.png  used on inpu
-t line 880.
+t line 879.
 (pdftex.def)             Requested size: 203.83417pt x 203.8345pt.
-<VariableSelectionPsi/joint_phi_psi.png, id=428, 433.62pt x 433.62pt>
+<VariableSelectionPsi/joint_phi_psi.png, id=426, 433.62pt x 433.62pt>
 File: VariableSelectionPsi/joint_phi_psi.png Graphic file (type png)
 <use VariableSelectionPsi/joint_phi_psi.png>
 Package pdftex.def Info: VariableSelectionPsi/joint_phi_psi.png  used on input 
-line 887.
+line 886.
 (pdftex.def)             Requested size: 203.83417pt x 203.8345pt.
-<VariableSelectionPsi/joint_theta_psi.png, id=429, 433.62pt x 433.62pt>
+<VariableSelectionPsi/joint_theta_psi.png, id=427, 433.62pt x 433.62pt>
 File: VariableSelectionPsi/joint_theta_psi.png Graphic file (type png)
 <use VariableSelectionPsi/joint_theta_psi.png>
 Package pdftex.def Info: VariableSelectionPsi/joint_theta_psi.png  used on inpu
-t line 896.
+t line 895.
 (pdftex.def)             Requested size: 203.83417pt x 203.8345pt.
-<VariableSelectionPsi/joint3d_phi_alpha_psi.png, id=430, 485.815pt x 636.3775pt
+<VariableSelectionPsi/joint3d_phi_alpha_psi.png, id=428, 485.815pt x 636.3775pt
 >
 File: VariableSelectionPsi/joint3d_phi_alpha_psi.png Graphic file (type png)
 <use VariableSelectionPsi/joint3d_phi_alpha_psi.png>
 Package pdftex.def Info: VariableSelectionPsi/joint3d_phi_alpha_psi.png  used o
-n input line 903.
+n input line 902.
 (pdftex.def)             Requested size: 135.89174pt x 177.99998pt.
 
-Underfull \hbox (badness 6559) in paragraph at lines 904--904
+Underfull \hbox (badness 6559) in paragraph at lines 903--903
 []\T1/cmr/m/n/10.95 (d) |Joint dis-tri-bu-tion of
  []
 
-<VariableSelectionPsi/joint3d_phi_theta_psi.png, id=431, 485.815pt x 636.3775pt
+<VariableSelectionPsi/joint3d_phi_theta_psi.png, id=429, 485.815pt x 636.3775pt
 >
 File: VariableSelectionPsi/joint3d_phi_theta_psi.png Graphic file (type png)
 <use VariableSelectionPsi/joint3d_phi_theta_psi.png>
 Package pdftex.def Info: VariableSelectionPsi/joint3d_phi_theta_psi.png  used o
-n input line 910.
+n input line 909.
 (pdftex.def)             Requested size: 135.89174pt x 177.99998pt.
 
-Underfull \hbox (badness 7704) in paragraph at lines 911--911
+Underfull \hbox (badness 7704) in paragraph at lines 910--910
 []\T1/cmr/m/n/10.95 (e) |Joint dis-tri-bu-tion of
  []
 
-<VariableSelectionPsi/joint3d_theta_alpha_psi.png, id=432, 485.815pt x 636.3775
+<VariableSelectionPsi/joint3d_theta_alpha_psi.png, id=430, 485.815pt x 636.3775
 pt>
 File: VariableSelectionPsi/joint3d_theta_alpha_psi.png Graphic file (type png)
 <use VariableSelectionPsi/joint3d_theta_alpha_psi.png>
 Package pdftex.def Info: VariableSelectionPsi/joint3d_theta_alpha_psi.png  used
- on input line 917.
+ on input line 916.
 (pdftex.def)             Requested size: 135.89174pt x 177.99998pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 918--918
+Underfull \hbox (badness 10000) in paragraph at lines 917--917
 []\T1/cmr/m/n/10.95 (f) |Joint dis-tri-bu-tion of
  []
 
@@ -1430,10 +1430,10 @@ blic/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm12
 00.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/t
 exmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/pub
 lic/cm-super/sftt1200.pfb>
-Output written on rapport.pdf (26 pages, 2390347 bytes).
+Output written on rapport.pdf (26 pages, 2390367 bytes).
 PDF statistics:
- 610 PDF objects out of 1000 (max. 8388607)
- 440 compressed objects within 5 object streams
+ 608 PDF objects out of 1000 (max. 8388607)
+ 438 compressed objects within 5 object streams
  122 named destinations out of 1000 (max. 500000)
  420 words of extra memory for PDF output out of 10000 (max. 10000000)
 
